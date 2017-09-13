@@ -1,0 +1,117 @@
+.main{
+    width: 1200px;margin: 0 auto;
+}
+.login_main{
+    width: 1000px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+.login_main .main_bg{
+    height: 410px;
+    width: 1000px;
+    overflow: hidden;
+    margin-top: 80px;
+    margin-bottom: 60px;
+    background: url("../image/20170811005_login1.jpg") no-repeat center;
+}
+.login_main .login_box{
+    width: 500px;
+    height: 370px;
+    background:rgba(255,255,255,0.9);
+    border-radius: 5px 5px ;
+    float: right;
+    padding: 10px;
+    margin: 10px;
+}
+.login_box .login_title{
+    text-align: center;
+    border-bottom: 1px solid #877b74;
+    color: #877b74;;
+    margin-bottom: 50px;
+    font-size: 24.5px;
+    line-height: 40px;
+    font-weight: bold;
+}
+.login_box .control_group{
+    margin-bottom: 20px;
+}
+.control_group .control_label{
+    float: left;
+    width: 160px;padding-top: 5px;text-align: right;
+    display: block;margin-bottom: 5px;
+    font-size: 14px;
+}
+.control_group .controls{
+    margin-left: 180px;
+}
+.form_horizontal input{
+    display: inline-block;
+    vertical-align: middle;
+    width: 147px;border: 1px solid rgb(218,217,217);
+    padding:4px 6px;
+    outline: none;
+    height: 20px;
+    line-height: 20px;
+    color: #555;
+    border-radius: 4px;
+    box-shadow: inset 0 1px 1px rgba(0,0,0,0.075);
+    background: #eaeaeb;
+}
+.login_info{
+    height: 24px; line-height: 24px; color: rgb(177,0,0)
+}
+.controls input.btu{
+    cursor: pointer;display: inline-block;
+    vertical-align: middle;
+    width: auto;height: 30px;
+    color: #fff;
+    text-shadow: 0 -1px 0 rgba(0,0,0,0.25);
+    background-color: #49afcd;
+    background-image:linear-gradient(to bottom,#5bc0de,#2f96b4) ;
+    background-repeat: repeat-x;
+    border-color: rgba(0,0,0,0.1) rgba(0,0,0,0.1) rgba(0,0,0,0.25);
+    padding: 4px 12px;
+    font-size: 14px;
+    line-height: 20px;
+    text-align: center;
+    border-radius: 4px;
+    box-shadow: inset 0 1px 0 rgba(255,255,255,0.2), 0 1px 2px rgba(0,0,0,0.05);
+    outline:0;
+}
+.controls input.btu:hover{
+    background: #2f96b4;
+}
+.btu~a:hover{
+    text-decoration: underline;
+}
+.form_horizontal p{
+    text-align: center;
+}
+.form_horizontal p a{
+    cursor: pointer;
+    color: #6b6b6b;
+}
+.form_horizontal p a:hover{
+    color: #7F5B42;
+    text-decoration: underline;
+}
+.control_group .login_info{
+    display: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,22 @@
+html,body,ul ,li,ol,dl,dd,dt,p,h1,h2,h3,h4,h5,h6,form,fieldset,legend,img{ padding: 0;margin: 0;}
+body{ font: 12px/24px "微软雅黑"; color: #6b6b6b}
+img,fieldset{ border: 0;}
+a{ text-decoration: none;}
+ul li{ list-style: none;}
+h1,h2,h3,h4,h5,h6,b,strong{font-weight: normal;}
+em,i{ font-style: normal;}
+input{outline: none;}
+table{border-collapse: collapse; border-spacing: 0;}
+
+.clearfix:after{
+	content: "."; display: block; font-size: 0; height: 0; visibility: hidden; clear: both; overflow: hidden;
+}
+a{
+	cursor: pointer;
+}
+.main{
+	width: 1200px;margin: 0 auto;
+}
+a{
+	color: #6b6b6b;
+}

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="http://s.dapuimg.com/favicon.ico" type="image/x-icon">
+    <title>【质造】星球杯 其他</title>
+    <link rel="stylesheet" href="../css/reset.css" type="text/css">
+    <link rel="stylesheet" href="../css/product_1927.css">
+    <script src="../lib/jquery/jquery-1.12-4.min.js"></script>
+    <script src="../lib/arttemplate/template-native.js"></script>
+    <script SRC="../lib/jquery-Plugins/jquery.elevateZoom-2.2.3.min.js"></script>
+    <script src="../js/head.js"></script>
+
+</head>
+<body>
+<div class="main">
+    <div> <list-itime id="header"></list-itime> </div>
+    <div> <list-itime id="right_bar"></list-itime></div>
+
+    <!------- 主要部分 ---------->
+    <div  class="main_f1">
+        <div class="crumb" style="width: 100% ;height: 20px;overflow: hidden">
+            <span> <a href="index.html" style="color: #616146">首页</a> &nbsp;></span>
+            <span> <a href="gallery-393.html" style="color: #616146">大朴优选</a> &nbsp;></span>
+            <span> <a href="index.html" style="color: #616146">茶艺生活</a> &nbsp;></span>
+            <span> <a href="index.html" style="color: #616146">创意礼品杯</a> &nbsp;></span>
+            <em id="last_name">【质造】星球杯</em>
+        </div>
+        <div class="prod_details">
+            <form action="" id="main_form" class="goods_action" >
+                <div class="main_info">
+                    <div class="prod_carousel">
+                        <div class="goods_big">
+                            <a href="#"><img src="../image/prod1.jpg" alt="" class="con_img"></a>
+                        </div>
+                        <div class="goods_small">
+                            <div class="totop" title="向左"></div>
+                            <ul class="small_ul">
+                                <li><img src="../image/prod1.jpg" alt=""> <i></i></li>
+                                <li><img src="../image/prod2.jpg" alt=""> <i></i></li>
+                                <li><img src="../image/prod3.jpg" alt=""> <i></i></li>
+                                <li><img src="../image/prod4.jpg" alt=""> <i></i></li>
+                                <li><img src="../image/prod5.jpg" alt=""> <i></i></li>
+                            </ul>
+                            <div class="tobottom" title="向右"></div>
+                        </div>
+                        <div  class="clearfix">
+                            <div class="links">
+                                <a href="#"><div class="shoucang" id="shoucang" style="width: 80px;height: 20px;"></div></a>
+                                <div class="sharemain">
+                                    <div class="shareimg" style="padding: 7px 0 0 15px;">
+                                        <a href="#" class="bds_weixin" title="分享到微信"></a>
+                                        <a href="#" class="bds_tsina" title="分享到新浪微博"></a>
+                                        <a href="#" class="bds_tqq" title="分享到腾讯微博"></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!------- 右边详细信息 -------->
+                    <div class="goods_leftbox clearfix" style="width: 600px;">
+                        <h1 class="goods_name" style="font-weight: bold"> 【质造】星球杯</h1>
+                        <div class="product_id clearfix"> <span>商品编码：</span> <span id="goodsBn">101201154455</span></div>
+                        <div class="goods_price_box clearfix">
+                            <em style="font-size: 24px;color: #7f5b42">￥99</em>
+                        </div>
+                        <div class="goods_price_box clearfix" style="margin-bottom: 5px;">
+                            <span style="display:inline-block;width:50px;text-align:center;font-size: 12px;color:#ffffff;background:#7F5B42;padding:2px 5px;font-weight: bold;border-radius:3px 3px; height: 22px;" >会员价</span>
+                            <span class="mlvprice" style="color:#7F5B42;padding-left:10px;font-weight: bold;">￥94</span>
+                            <a href="#" style="color:#ff0000;text-decoration: none;" target="_blank">如何成为会员</a>
+                        </div>
+                        <div id="promotion_show" class="clearfix" style="margin-bottom: 5px;">
+                            <span style="display:inline-block;width:50px;text-align:center;font-size: 12px;color:#ffffff;background:#b1544f;padding:2px 5px;font-weight: bold;border-radius:3px 3px;">促销</span>
+                            <span id="promotion_msg" style="padding-left: 10px;"></span>
+                        </div>
+                        <div class="score_wrap">
+                            <ul>
+                                <li>
+                                    <p class="score_num">10</p>
+                                    <p class="score_name">销量</p>
+                                    <p class="score_tag_right"></p>
+                                </li>
+                                <li>
+                                    <p class="score_num">3</p>
+                                    <p class="score_name">用户评论数</p>
+                                </li>
+                                <li>
+                                    <p class="score_num">198</p>
+                                    <p class="score_name">评论送积分</p>
+                                    <i class="score_tag_left"></i>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <script>
+                        $(function () {
+                            //得到所有的li
+                            var _imglis = $(".small_ul li");
+                            $(_imglis).hover(function () {
+                                var imgSrc = $(this).children("img").attr("src");
+                                $(".goods_big").find("img").attr("src",imgSrc);
+                                $(".zoomWindow").css("background-image",'url('+imgSrc+')');
+                            },function () { });
+                            //放大镜
+                            $(".con_img").elevateZoom();
+                        })
+                    </script>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div>  <list-itime id="footer"></list-itime></div>
+</body>
+</div>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

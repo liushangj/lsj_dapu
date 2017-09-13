@@ -1,0 +1,99 @@
+[
+  {
+    "season":[
+              {
+                "href":"#",
+                "img" : "../image/season_1.jpg",
+                "name":"天然新疆针织纯色件套",
+                "price":"RMB：399"
+              },
+              {
+                "href":"#",
+                "img" : "../image/season_2.jpg",
+                "name":"全工艺精梳纯棉600根绣花四件套",
+                "price":"RMB：1899"
+              },
+              {
+                "href":"#",
+                "img" : "../image/season_3.jpg",
+                "name":"天然新疆棉针织印花四件套",
+                "price":"RMB：769"
+              }
+             ]
+  },
+  {
+    "new":[
+            {
+              "href":"#",
+              "img":"../image/nav_1.jpg",
+              "width":"238px",
+              "height":"478px",
+              "name":"精梳棉翻领夹棉保暖男式家居袍",
+              "price":"RMB:299"
+            },
+            {
+              "href":"#",
+              "img":"../image/nav_2.jpg",
+              "width":"470px",
+              "height":"238px",
+              "name":"暖芯羊毛被",
+              "price":"RMB:399"
+            },
+            {
+              "href":"#",
+              "img":"../image/nav_3.jpg",
+              "width":"238px",
+              "height":"238px",
+              "name":"暖芯蚕丝被",
+              "price":"RMB:699"
+            },
+            {
+              "href":"#",
+              "img":"../image/nav_4.jpg",
+              "width":"238px",
+              "height":"478px",
+              "name":"'It's Texturd' 设计师短款夹棉连衣裙",
+              "price":"RMB:349"
+            },
+            {
+              "href":"#",
+              "img":"../image/nav_5.jpg",
+              "width":"470px",
+              "height":"238px",
+              "name":"90%白鸭羽绒被",
+              "price":"RMB:699"
+            },
+            {
+              "href":"#",
+              "img":"../image/nav_6.jpg",
+              "width":"238px",
+              "height":"238px",
+              "name":"90%白鸭羽绒夹心枕",
+              "price":"RMB:399"
+            }
+    ]
+  }
+
+]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

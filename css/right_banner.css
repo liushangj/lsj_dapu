@@ -1,0 +1,48 @@
+.right_banner{
+    width: 40px;position: fixed;
+    right: 0;
+    border: 0 solid #CCC;
+    background: #fff;
+    opacity: 0.8;
+    z-index: 99;padding-top: 117px;
+    height: 750px;
+}
+.right_banner p{
+    width: 40px;height: 45px;
+    position: relative;
+    margin-bottom: 5px;
+}
+.right_banner p:nth-child(2) em{
+    line-height: 22px;
+}
+.right_banner p:last-child em{
+    line-height: 22px;
+}
+.right_banner p:hover em{
+    display: inline;
+
+}
+.right_banner img{
+    width: 40px;height: 40px;
+}
+.right_banner em{
+    height: 45px;width: 40px;
+    line-height: 45px;
+    font-size: 12px;
+    padding-left: 0.5px;
+    cursor: pointer;
+    position: absolute;
+    left: 0;;top: 0;
+    text-align: center;
+    background: #AE0505;
+    font-weight: bold;
+    z-index: 1;
+    color: #fff;
+    display: none;
+}
+.right_banner p .appcss,.right_banner p .zxkcss{
+    left:-111px;top: -42px;
+}
+.right_banner p .appcss img,.right_banner p .zxkcss img{
+    width: 104px;height: 120px;
+}

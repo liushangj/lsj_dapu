@@ -1,0 +1,310 @@
+
+/******************************** right_banner **********************************/
+.main{
+    width: 1200px;margin: 0 auto;
+}
+.right_banner{
+    width: 40px;position: fixed;
+    right: 0;
+    border: 0 solid #CCC;
+    background: #fff;
+    opacity: 0.8;
+    z-index: 99;padding-top: 117px;
+    height: 750px;
+}
+.right_banner p{
+    width: 40px;height: 45px;
+    position: relative;
+    margin-bottom: 5px;
+}
+.right_banner p:nth-child(2) em{
+    line-height: 22px;
+}
+.right_banner p:last-child em{
+    line-height: 22px;
+}
+.right_banner p:hover em{
+    display: inline;
+
+}
+.right_banner img{
+    width: 40px;height: 40px;
+}
+.right_banner em{
+    height: 45px;width: 40px;
+    line-height: 45px;
+    font-size: 12px;
+    padding-left: 0.5px;
+    cursor: pointer;
+    position: absolute;
+    left: 0;;top: 0;
+    text-align: center;
+    background: #AE0505;
+    font-weight: bold;
+    z-index: 1;
+    color: #fff;
+    display: none;
+}
+.right_banner p .appcss,.right_banner p .zxkcss{
+    left:-111px;top: -42px;
+}
+.right_banner p .appcss img,.right_banner p .zxkcss img{
+    width: 104px;height: 120px;
+}
+
+/************************** banner ****************************/
+
+.carousel_container {
+    position: relative;
+    overflow: hidden;
+}
+.carousel_container ul {
+    list-style: none;
+    position: relative;
+}
+.carousel_container ul li {
+    position: absolute;
+    top : 0;
+    left: 0;
+    display: none;
+}
+.carousel_container .pages {
+    height:30px;
+    position: absolute;
+    left:0;
+    bottom: 0;
+    text-align: center;
+}
+
+.carousel_container .pages div {
+    width: 16px;
+    height: 16px;
+    margin:5px;
+    display: inline-block;
+    border-radius: 20px;
+    box-shadow: inset 0 0 3px #fff;
+
+}
+.carousel_container .pages div.current {
+    background: #fff;
+}
+
+.carousel_container .prev,.carousel_container .next {
+    width: 45px;
+    height: 100px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin:auto;
+    background: #000;
+    color:#fff;
+    font-size:30px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 100px;
+    opacity: 0.5;
+    cursor:default;
+}
+.carousel_container .next {
+    right: 0;
+}
+/************************** article ****************************/
+.article{ height: 390px}
+.article_title{
+    height: 60px;background: url("../image/20170811003_jingxuan.jpg") no-repeat center;
+    margin-top: 20px;margin-bottom: 9px;
+    cursor: pointer;
+}
+.article_title a{
+    display: block;width: 100%;height: 100%;
+}
+.article_hide{
+    display: none;
+}
+.article .home_article_w{
+    width: 398px;height: 228px;
+    position: relative;
+    float: left;
+    margin-right: 3px;
+}
+.article .home_article_w:last-child{
+    margin-right: 0;
+}
+.article .home_article_w a{
+    width: 398px;height: 228px;display: block;
+    overflow: hidden;
+}
+.article .home_article_w img{
+    display: block;
+    width: 398px;
+    height: 228px;
+}
+.article .home_article_w img{
+    transform: scale(1);
+    transition: all 1s linear;
+}
+.article .home_article_w img:hover{
+    transform: scale(1.05);
+    transition: all 1s linear;
+}
+.article .home_article_box{
+    width: 380px;height: 128px;
+    position: absolute;
+    bottom: -100px;
+    margin-left: 9px;
+    background: #eee;
+    z-index: 999;
+}
+.article .home_article_box .article_col_1{
+    height: 45px;
+    padding-top: 5px;
+}
+.home_article_box .article_col_1 .article_col_1_pic{
+    text-align: center;
+    width: 16.66%;
+    float: left;
+}
+.home_article_box .article_col_1 .article_col_1_pic img{
+    width: 40px;height: 40px;border-radius: 50%;
+    display: inline-block;
+}
+.home_article_box .article_col_1 .article_col_1_right{
+    float: left;
+    width: 83.33%;
+}
+.home_article_box .article_col_1 .article_col_1_right .col_1_r_1{
+    color: rgb(34,34,34);
+    font-size: 0.85em;
+    font-weight: bold;
+}
+.home_article_box .article_col_1 .article_col_1_right .col_cx_left{
+    float: left;
+    margin-top: 4px;
+    font-size: 0.75em;color: rgb(108,108,108);
+    width: 50%;
+}
+.article_col_1 .article_col_1_right .col_cx_left div{
+    margin-left: -5px;float: left;
+    margin-right: 15px;
+}
+.article_col_1 .article_col_1_right .col_cx_left img{
+    width: 14.5px;height: 11.5px;float: left;
+}
+.col_cx_left em{
+    float: left;margin-top: -6px;
+}
+.home_article_box .article_col_1 .article_col_1_right .col_cx_left:last-child{
+    text-align: right;
+}
+        /******************************* season *********************************/
+.season_container{
+    height: 290px;
+}
+.season_container .season_model{
+    width: 398px;height: 290px;
+    position: relative;
+    float: left;
+    margin-right: 3px;
+}
+.season_container .season_model:last-child{
+    margin-right: 0;
+}
+.season_container .season_model .season_wrapper{
+    position: absolute;
+    bottom: 0;
+    background: #fff;
+    font-size: 13px;
+    color: #000;
+}
+/******************************* new *********************************/
+.new_main_con{
+    height: auto;
+}
+.new_model{
+    width: 238px;height: 238px;
+    position: relative;
+    float: left;
+    margin-right: 2px ;
+    margin-bottom: 2px;
+}
+.new_con_big{overflow: hidden}
+.new_con_small{
+    overflow: hidden;
+}
+.new_model .new_wraper{
+    position: absolute;
+    bottom: 0;
+    background: #fff;
+    font-size: 13px;
+    color: #000;
+}
+.new_main_con .new_con_big .new_model:first-child .new_wraper{
+    bottom:-240px;
+}
+.new_main_con .new_con_big .new_model:nth-child(4){
+    margin-right: 0;
+    left: 232px;
+}
+.new_main_con .new_con_big .new_model:nth-child(4) .new_wraper{
+    bottom: -240px;
+}
+.new_main_con .new_con_big .new_model:nth-child(3){
+    left: 232px;
+}
+.new_main_con .new_con_big .new_model:nth-child(5){
+    left: -718px;
+    top:240px;
+}
+.new_main_con .new_con_big .new_model:nth-child(6){
+    left:712px;
+}
+.new_con_small .new_model:nth-child(5){
+    margin-right: 0;
+}
+        /**************************** footer ******************************/
+.footer_con{
+    width: 1200px;
+    padding-top: 20px;
+    background: #eee;
+    padding-bottom: 22px;
+    margin-top: 10px;
+}
+.footer_con .qrcodeing{
+    padding-bottom: 20px;
+    width: 1200px;
+    overflow: hidden;
+    margin: 0 auto;
+}
+.footer_con .qrcodeing li img{
+    width: 120px;height: 120px;
+    display: inline-block;
+}
+.footer_con .item{
+    text-align: center;
+    color: #6B6B6B;
+    line-height: 30px;
+    width: 25%;float: left;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

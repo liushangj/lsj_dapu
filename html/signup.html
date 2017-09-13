@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="http://s.dapuimg.com/favicon.ico" type="image/x-icon">
+    <title>大朴欢迎您，请注册！</title>
+    <link rel="stylesheet" href="../css/reset.css" type="text/css">
+    <link rel="stylesheet" href="../css/signup.css" type="text/css">
+    <script src="../lib/jquery/jquery-1.12-4.min.js"></script>
+    <script src="../lib/arttemplate/template-native.js"></script>
+    <script src="../js/carousel.js"></script>
+    <script src="../js/signup.js"></script>
+    <script src="../js/head.js"></script>
+</head>
+<body>
+<div class="main">
+    <div class="top"> <list-itime id="header"></list-itime> </div>
+    <!----------------------- form ------------------------->
+    <div class="form_horizontal">
+        <div class="re_body">
+            <div class="formPanel">
+                <div class="field">
+                    <label class="leftlabel">手机号：</label>
+                    <div class="floatdiv">
+                        <input type="text" class="txt7" id="mobile">
+                        <span id="error_mobile" class="errormsg" style="display: none">请填写正确的手机号，目前仅支持中国大陆的手机号</span>
+                    </div>
+                </div>
+                <div class="field">
+                    <label class="leftlabel">图片码：</label>
+                    <input type="text" id="v_code" class="txt3" style="background: #e4e5e5;" >
+                    <div style=" border: none;" class="l_warining verfyCode_sj">
+                        <img src="" alt="" border="1">
+                    </div>
+                    <input type="button" class="btu1 getyzm" value="获取短信码">
+                </div>
+                <div class="field">
+                    <div class="floatdiv">
+                        <span id="error_v_code" class="error_v_code">请先输入图片验证码的计算结果，再点击获取短信码</span>
+                    </div>
+                </div>
+                <div class="field">
+                    <label for="" class="leftlabel">短信码：</label>
+                    <div class="floatdiv">
+                        <input type="text" id="yzm" class="txt7" onfocus="this.style.border='1px solid #f9c908';document.getElementById(tishi2).style.display='inline-block'">
+                        <span id="getcodeerror" class="errormsg"></span>
+                        <span id="tishi2" style="display: block;color: #ff0000;height: 28px;"></span>
+                    </div>
+                </div>
+                <div class="field">
+                    <label for="" class="leftlabel">密码：</label>
+                    <div class="floatdiv">
+                        <input type="text" style="float: left" class="txt7 input-style" id="psd" maxlength="50" onfocus="this.style.border ='1px #f9c908 solid'; document.getElementById('error_pwd1').style.display = 'inline-block';">
+                    </div>
+                    <div style="float: left">
+                        <div id="level" class="pw-strength">
+                            <div class="pw-bar"></div>
+                            <div class="pw-bar-on"></div>
+                            <div class="pw-txt">
+                                <span>弱</span>
+                                <span>中</span>
+                                <span>强</span>
+                            </div>
+                        </div>
+                    </div>
+                    <span id="error_pwd1" class="errormsg"></span>
+                    <span id="tip_pwd1" style="display: block;color: #ff0000;height: 28px;"></span>
+                </div>
+                <div class="field">
+                    <label for="" class="leftlabel">确认密码：</label>
+                    <div class="floatdiv">
+                        <input type="password" class="txt7" id="pwd_again" maxlength="50" onfocus="this.style.border ='1px #f9c908 solid'; document.getElementById('error_pwd2').style.display = 'inline-block';">
+                        <span id="error_pwd2" class="errormsg"></span>
+                        <span id="tip_pwd2" style="display: block;color: #ff0000;height: 28px;"></span>
+                    </div>
+                </div>
+                <div class="field">
+                    <label for="" class="leftlabel"></label>
+                    <div class="floatdiv">
+                        <input type="checkbox" id="license" value="agree" checked="checked">
+                        <span>同意注册协议</span>
+                        <a href="#" target="_blank">《大朴用户协议》</a>
+                    </div>
+                </div>
+                <div class="action">
+                    <input type="button" id="mobile_reg_submit" value="注册" class="reg_btn">
+                    <span>我已注册，现在就 <a href="login.html" style="color: red">登录</a></span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="sign_up"> <list-itime id="footer"></list-itime> </div>
+</div>
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

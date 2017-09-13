@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="http://s.dapuimg.com/favicon.ico" type="image/x-icon">
+    <title>大朴网-无甲醛棉品，始于大朴 30天无条件退换货、货到付款、88元包邮</title>
+    <link rel="stylesheet" href="../css/index.css" type="text/css">
+    <link rel="stylesheet" href="../css/reset.css" type="text/css">
+    <script src="../lib/jquery/jquery-1.12-4.min.js"></script>
+    <script src="../lib/arttemplate/template-native.js"></script>
+    <script src="../js/carousel.js"></script>
+    <script src="../js/head.js"></script>
+
+</head>
+<body>
+<!----------------------------------- right_banner ------------------------------------->
+<div class="right_banner">
+    <list-itime id="right_bar"></list-itime>
+</div>
+<div class="main">
+    <div class="top"> <list-itime id="header"></list-itime> </div>
+    <!----------------------------------- banner ------------------------------------->
+    <div class="banner">
+        <div id="banner_container"> </div>
+    </div>
+    <!------------------------------------- article------------------------------------------->
+    <div class="article">
+    <div class="article_title">
+        <a href="#"></a>
+    </div>
+    <div class="home_article">
+        <div class="article_hide">
+            <a href="#">
+                <img src="../image/pic1.jpg" alt="" class="word_pic">
+            </a>
+            <div class="home_article_box">
+                <div class="article_col_1">
+                    <div class="article_col_1_pic">
+                        <img src="../image/head.jpg" alt="" class="head_pic">
+                    </div>
+                    <div class="article_col_1_right">
+                        <p class="col_1_r_1">棉仔</p>
+                        <div class="col_cx_left">
+                            <div>
+                                <img src="../image/2017022800_time.png" alt=""><em class="timer">2017-08-30</em>
+                            </div>
+                            <div><img src="../image/2017022800_place.png" alt=""><em class="place">北京</em></div>
+                        </div>
+                        <div class="col_cx_left">
+                            <div>
+                                <img src="../image/2017022800_eye.png" alt=""><em class="ryr">1289</em>
+                            </div>
+                            <div>
+                                <img src="../image/2017022800_thumb.png" alt=""><em class="zhan">36</em>
+                            </div>
+                            <div>
+                                <img src="../image/2017022800_chat.png" alt=""><em class="chat">10</em>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="article_col_2" style="width: 100%; overflow: hidden">
+                    <div style="width: 6%; padding-left: 0; padding-right: 0; float: left">
+                        <div style="float: right; width: 4px; height: 16px; background: #76c5af; margin-top: 5px;"></div>
+                    </div>
+                    <div style="width: 94%; padding-left: 0; padding-right: 0; float: left">
+                        <div style="margin-left: 10px; padding: 3px 0 ;font-size: 1.2em; color: rgb(34,34,34);" class="word_title">《大朴828五周年庆动画：遇见你，刚刚好..</div>
+                        <div style="margin-left:-5px;line-height:17px;padding-left:0;padding-right:5px;font-size: 0.8em;color: rgb(108,108,108);" class="article_word">一只美丽的蜂鸟飞进了二楼的露台，被风吹起的床单吸引了它的注意力，它好奇地在飞进了...</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <!----------------------------------- season --------------------------------------------->
+    <div style="margin-top: 20px;text-align: center">
+        <a href="#" target="_blank">
+            <img src="../image/pic_1.jpg" alt="大朴网">
+        </a>
+    </div>
+    <div class="season_container">   </div>
+    <script type="text/html" id="season_temp">
+        <%
+        for ( var i = 0 ; i < season_model.length ; i++){
+            var _model = season_model[i];
+        %>
+        <div class="season_model">
+            <a href=<%= _model.href %> target="_blank">
+                <img src=<%= _model.img %> alt="" width="398" height="290">
+                <div class="season_wrapper" style="width: 398px; height: 45px; text-align: center; padding-top: 10px ;display:none">
+                    <p><%= _model.name %></p>
+                    <p><%= _model.price %></p>
+                </div>
+            </a>
+        </div>
+        <%
+        }
+        %>
+    </script>
+    <script>
+        $(function () {
+            //季节新品
+            $(".season_container").on("mouseenter",".season_model",function () {
+                $(this ).find(".season_wrapper").slideDown(500);
+            }).on("mouseleave",".season_model",function () {
+                $(this ).find(".season_wrapper").slideUp(500);
+            });
+            // 从 mock/products.json 文件中加载商品数据
+            $.getJSON("../mock/index.json", function(data){
+                // 渲染模板
+                var html = template("season_temp", {season_model:data[0].season});
+                // 显示
+                $(".season_container").html(html);
+            });
+
+        })
+    </script>
+
+    <!-------------------------------------  news  --------------------------------------------->
+    <div style="margin-top: 20px;text-align: center">
+        <a href="#" target="_blank">
+            <img src="../image/20170811003_news.jpg" alt="大朴网">
+        </a>
+    </div>
+    <div class="new_main_con">
+        <div class="new_con_big"></div>
+        <div class="new_con_small"></div>
+    </div>
+    <script type="text/html" id="new_temp">
+        <%
+        for ( var i = 0 ; i < new_model.length ; i++){
+        var _model = new_model[i],
+            bottom = "238 - Number(_model.width)"+"px";
+        %>
+            <div class="new_model">
+                <a href=<%= _model.href %> target="_blank">
+                    <img src=<%= _model.img %> alt="" width=<%= _model.width %> height=<%= _model.height %> >
+                    <div class="new_wraper" style="width: <%= _model.width %>; height: 45px; text-align: center; padding-top: 10px ;display:none;">
+                        <p><%= _model.name %></p>
+                        <p><%= _model.price %></p>
+                    </div>
+                </a>
+            </div>
+        <%
+        }
+        %>
+    </script>
+    <script>
+
+        $(function () {
+            $.getJSON("../mock/index.json",function (data) {
+                var html = template( 'new_temp', { new_model:data[1].new});
+                $(".new_con_big").html(html);
+            });
+
+            $(".new_main_con").on("mouseenter",".new_model",function () {
+                $(this ).find(".new_wraper").slideDown(500);
+            }).on("mouseleave",".new_model",function () {
+                $(this ).find(".new_wraper").slideUp(500);
+            });
+            //改变伸缩条的定位
+
+        })
+    </script>
+    <script type="text/html" id="new_temp_small">
+        <%
+        for ( var i = 0 ; i < _model.length ; i++){
+        var _mo = _model[i];
+        %>
+        <div class="new_model">
+            <a href=<%= _mo.href %> target="_blank">
+                <img src=<%= _mo.img %> alt="" width="238" height="238" >
+                <div class="new_wraper" style="width: 238px; height: 45px; text-align: center; padding-top: 10px ;display:none;">
+                    <p><%= _mo.name %></p>
+                    <p><%= _mo.price %></p>
+                </div>
+            </a>
+        </div>
+        <%   }  %>
+    </script>
+    <script>
+        var _data = [
+            { "href":"#", "img" : "../image/ss1.jpg", "name":"Roome智能光瓶","price":"RMB：199" },
+            { "href":"#", "img" : "../image/ss2.jpg", "name":"星球杯", "price":"RMB：99"},
+            { "href":"#", "img" : "../image/ss3.jpg", "name":"琢磨壶", "price":"RMB：458"},
+            { "href":"#", "img" : "../image/ss4.jpg", "name":"Oclean智能声波牙刷",  "price":"RMB：399" },
+            { "href":"#","img" : "../image/ss5.jpg","name":"大朴亲子灯","price":"RMB：99"},
+            { "href":"#", "img" : "../image/ss6.jpg","name":"埃及长绒纯棉加厚款毛方浴套装", "price":"RMB：119"},
+            { "href":"#", "img" : "../image/ss7.jpg","name":"斯里兰卡乳胶枕（面包款）", "price":"RMB：399"},
+            {"href":"#", "img" : "../image/ss8.jpg","name":"斯里兰卡乳胶枕（波浪款）", "price":"RMB：399"},
+            {"href":"#","img" : "../image/ss9.jpg", "name":"花鸟纯棉印花靠垫", "price":"RMB：99"},
+            { "href":"#", "img" : "../image/ss10.jpg", "name":"麻棉绣花外缝鞋", "price":"RMB：79"}
+        ];
+        var html = template('new_temp_small',{ _model:_data});
+        $(".new_con_small").append(html)
+
+    </script>
+
+    <!------------------------- footer -------------------------->
+    <div class="footer_con">
+        <ul class="qrcodeing">
+                <li class="item">
+                    <img src="../image/appdown_upd.jpg" alt="">
+                    <p>大朴APP下载</p>
+                </li>
+                <li class="item">
+                    <img src="../image/weixin_upd2.jpg" alt="">
+                    <p>大朴微信版</p>
+                </li>
+                <li class="item">
+                    <img src="../image/dapu_2017040701.jpg" alt="">
+                    <p>大朴微信服务号</p>
+                </li>
+                <li class="item">
+                    <img src="../image/dapu_2017040701.jpg" alt="">
+                    <p>微信客服</p>
+                </li>
+        </ul>
+        <div class="copy"> <list-itime id="footer"></list-itime> </div>
+    </div>
+
+</div>
+
+
+
+
+
+<script>
+    $(function () {
+
+        /***** 轮播图 *****/
+        new Carousel({
+            imgs : [
+                {src:"../image/ban_1.jpg", href:"http://www.163.com"},
+                {src:"../image/ban_2.jpg", href:"http://www.sina.com.cn"},
+                {src:"../image/ban_3.jpg", href:"http://baike.baidu.com"},
+                {src:"../image/ban_4.jpg", href:"http://baike.baidu.com"}
+            ],
+            container : $("#banner_container"),
+            width : 1200,
+            height : 450
+        });
+        //删除上页、下页
+        $(".prev").remove();
+        $(".next").remove();
+
+        /******** 精选话题 *******/
+        function article() {
+            var  attr_article = [
+                    {},
+                    {
+                        word_pic:"../image/pic2.jpg",
+                        head_src:"../image/head.jpg",
+                        nick_name : "棉仔",
+                        time : "2017-08-29",
+                        place : "北京",
+                        eye:1572,
+                        zhan : 24,
+                        chat : 10,
+                        title : "朴素说03期：老郭和他的毛笔",
+                        word : "书法丹青是他的工作，是他的乐趣，亦是他的生活，更是他的人生......"
+                    },
+                    {
+                        word_pic:"../image/pic3.jpg",
+                        head_src:"../image/head2.jpg",
+                        nick_name : "唐瑾",
+                        time : "2017-08-24",
+                        place : "深圳",
+                        eye:1565,
+                        zhan : 11,
+                        chat : 5,
+                        title : "大朴代言人08月期：孩子便是我追求的动力...",
+                        word : "我是全职妈妈，想跟你们分享一下我的世界与生活。"
+                    }
+                ];
+            for( var i=0; i<attr_article.length;i++){
+                if( i===0){
+                    $(".article_hide").clone(true)
+                        .removeClass("article_hide")
+                        .addClass("home_article_w").appendTo(".home_article");
+                }
+                else {
+                    $(".article_hide").clone(true)
+                        .removeClass("article_hide")
+                        .addClass("home_article_w")
+                        .find(".word_pic").attr({ src : attr_article[i].word_pic}).end()
+                        .find(".head_pic").attr({ src : attr_article[i].head_src}).end()
+                        .find(".col_1_r_1").text(attr_article[i].nick_name).end()
+                        .find(".timer").text(attr_article[i].time).end()
+                        .find(".place").text(attr_article[i].place).end()
+                        .find(".eye").text(attr_article[i].eye).end()
+                        .find(".zhan").text(attr_article[i].zhan).end()
+                        .find(".chat").text(attr_article[i].chat).end()
+                        .find(".word_title").text(attr_article[i].title).end()
+                        .find(".article_word").text(attr_article[i].word).end()
+                        .appendTo(".home_article");
+                }
+            }
+            }
+        article();
+
+    })
+
+
+</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

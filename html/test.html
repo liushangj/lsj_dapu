@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="../css/swiper-3.4.2.min.css" type="text/css">
+    <script src="../lib/jquery/jquery-1.12.4.js"></script>
+    <script src="../lib/swiper/swiper-3.4.2.jquery.min.js"></script>
+
+    <style type="text/css">
+        .swiper-container{
+            width: 600px;
+            height: 300px;
+        }
+        .swiper-slide div{
+            font-size: 50px;
+            text-align: center;
+            line-height: 300px;
+            color: #ff0000;
+        }
+        .bg_img{
+            position: absolute;
+            left: 0;
+            top: 0;
+            background-size: cover;
+        }
+    </style>
+</head>
+<body>
+<div class="swiper-container">
+    <div style="background:url(../image/ban_2.jpg); height: 300px; width: 800px;" data-swiper-parallax="-23%" data-swiper-parallax-duration="3000" class="bg_img"></div>
+    <div class="swiper-wrapper">
+        <div class="swiper-slide"> <div data-swiper-parallax="-100">Slide 1</div> </div>
+        <div class="swiper-slide"> <div data-swiper-parallax="-200">Slide 2</div> </div>
+        <div class="swiper-slide"> <div data-swiper-parallax="-100">Slide 3</div> </div>
+    </div>
+    <!-- 如果需要分页器 -->
+    <div class="swiper-pagination"></div>
+
+    <!-- 如果需要导航按钮 -->
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+
+  <!--  &lt;!&ndash; 如果需要滚动条 &ndash;&gt;
+    <div class="swiper-scrollbar"></div>-->
+</div>
+<script>
+    var mySwiper = new Swiper ('.swiper-container', {
+        direction: 'horizontal',
+        loop: true,
+
+        // 如果需要分页器
+        pagination: '.swiper-pagination',
+
+        // 如果需要前进后退按钮
+        nextButton: '.swiper-button-next',
+        prevButton: '.swiper-button-prev',
+
+       parallax : true
+    })
+</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

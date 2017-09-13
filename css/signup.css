@@ -1,0 +1,139 @@
+.main{
+    width: 1200px;margin: 0 auto;
+}
+.form_horizontal .re_body{
+    padding: 5px 0;
+    background: url("../image/signup.jpg") no-repeat center;
+    width: 100%;
+    height: 410px;
+}
+.re_body .formPanel{
+    padding: 20px 0;
+    margin: 5px;
+    width: 45%;
+    background: rgba(255,255,255,0.8);
+    border-radius: 5px 5px ;
+    float: right;
+}
+.formPanel .field{
+    padding-left: 20%;
+    line-height: 26px;
+    height: 44px;
+}
+.formPanel .field label{
+    float: left;
+    width: 315px;
+    margin-left: -315px;
+    color: #5e5e5e;
+    text-align: right;
+}
+.txt7{
+    width: 170px;height: 25px;
+    margin-right: 3px;
+    padding: 0 6px;
+    border: 1px solid #c2c1c1;
+    line-height: 24px;
+    vertical-align: top;
+    background: none;
+}
+.errormsg{
+    padding: 2px 15px 3px 15px ;
+    margin: 0 2px 1em 2px ;
+    background: #d9d3bc;
+    color: #f00;
+}
+.txt3{
+    width: 75px;
+    height: 24px;
+    padding: 0 6px;
+    border: 1px solid #dad9d9;
+    line-height: 24px;
+    vertical-align: top;
+    background: none;
+}
+.l_warining{
+    display: inline-block;
+    height: 20px;
+    margin: 0 0 -10px;
+}
+.btu1{
+    width: 79px;height: 26px;
+    line-height: 26px;
+    border: none;
+    overflow: hidden;
+    color: #6b6b6b;
+    font-family: SimSun;
+    text-align: center;
+    cursor: pointer;
+    background: #d9dbdc url("../image/loginbg.png") no-repeat -420px -5px;
+}
+.pw-strength{
+    clear: both;
+    position: relative;
+    top: 8px;
+    width: 180px;
+}
+.pw-bar{
+    background: url("../image/dapu_pwd-1.png") no-repeat;
+    height: 14px;
+    overflow: hidden;
+    width: 179px;
+}
+.pw-bar-on{
+    background: url("../image/dapu_pwd-2.png") no-repeat;
+    width: 0;
+    height: 14px;
+    position: absolute;
+    top: 1px;
+    left: 2px;
+    transition: width .5s ease-in;
+}
+.pw-txt{
+    padding-top: 2px;
+    width: 180px;
+    overflow: hidden;
+}
+.pw-txt span{
+    color: #707070;
+    float: left;
+    text-align: center;
+    width: 58px;
+}
+.formPanel .action{
+    padding: 10px 0 0 20%;
+}
+.reg_btn{
+    background: none;
+    border: 1px solid #e0dfdb;
+    display: inline-block;
+    line-height: 40px;
+    font-size: 16px;
+    width: 200px;
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

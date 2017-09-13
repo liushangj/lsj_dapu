@@ -1,0 +1,444 @@
+
+    <style type="text/css">
+        .main{
+            width: 1200px;margin: 0 auto;
+        }
+        .head{
+            height: 120px;
+            position: relative;
+        }
+        .head .head_logo{
+            width: 390px;height: 58px;
+            margin-top: 10px;float: left;
+        }
+        .head .right_bar{
+            float: right;
+            margin-top: 20px;
+        }
+        .head .right_bar .login_bar{
+            width: 89px;
+            height: 30px;
+            padding: 0 6px 0 4px;
+            background: #b1544f;
+            color: #ffffff;
+            float: right;
+        }
+        .head .right_bar .login_bar a{
+            color: #ffffff;
+            line-height: 28px;
+            margin: 7px;
+        }
+        .head .right_bar .login_bar a:hover{
+            font-weight: bold;
+        }
+        .head .right_bar .cart_bar{
+            width: 25px;height: 25px;
+            margin: 8px 107px 0 0 ;
+            float: right;
+            position: relative;
+        }
+        .head .right_bar .cart_bar .cart_number{
+            width: 19px;height: 17px;border-radius: 10px 10px 10px 10px ;
+            color: #fff;
+            background: #b1544f;
+            line-height: 12px;position: absolute;
+            text-align: center;
+            min-height: 15px;display: inline-block;
+            left: 20px;top: -5px;
+        }
+        .cart_bar .cart_shop{
+            width: 300px;height: auto;
+            min-height: 25px;line-height: 30px;
+            position: absolute;
+            top: 25px;
+            right: -1px;
+            border: 1px solid rgba(110,106,105,0.78);
+            padding: 15px;
+            z-index: 15;
+            overflow-x: hidden;
+            color: #6B6B6B;
+            background: #fff;
+            display: none;
+        }
+        .head .right_bar .cart_bar:hover .cart_shop{
+            display: block;
+        }
+        .head .right_bar .search_bar{
+            float: right;margin-right: 11px;
+        }
+        .head .right_bar .search_bar .search_key{
+            width: 200px;height: 20px;
+            padding: 5px;
+            background:#eee url("../image/dapu_homeseach.png") no-repeat right center;
+            border: none;
+            color: #91847B;
+            font-weight: bold;font-size: 11px;
+        }
+
+        /************************** banner ******************************/
+        .sysmenu_bar{
+            height: 50px;
+            position: absolute;
+            bottom: 0;
+
+        }
+        .sysmenu_bar li.nav_one_on:first-child{
+            width: 100px;
+        }
+        .sysmenu_bar li.nav_one_on{
+            width: 110px;background: url("../image/dapu_menu_diandian.png") no-repeat right center;
+            float: left;
+            text-align: center;
+            font-size: 14px;
+            line-height: 50px;
+            position: relative;
+            cursor: pointer;
+        }
+        .sysmenu_bar li#last_bg{
+            background: none;
+        }
+        .sysmenu_bar li.nav_one_on a{
+            color: #605046;
+        }
+        .sysmenu_bar li.nav_one_on a:hover{
+            font-weight: bold;
+        }
+        .sysmenu_bar li.nav_one_on:hover .nav_table{
+            display: block;
+        }
+        .sysmenu_bar li.nav_one_on:hover~.nav_show_bg{
+            display: block;
+        }
+        .sysmenu_bar li:first-child:hover~.nav_show_bg{
+            display: none;
+        }
+        .sysmenu_bar li#last_bg:hover~.nav_show_bg{
+            display: none;
+        }
+        .sysmenu_bar .nav_show_bg{
+            width: 1200px;
+            height: 300px;background:rgba(255,255,255,0.8);
+            position: absolute;
+            top: 50px;
+            z-index: 9;
+            display: none;
+        }
+        .sysmenu_bar .nav_table{
+            width: 450px;height: 300px;
+            background:rgba(255,255,255,0);
+            position: absolute;
+            top: 50px;
+            left: 0;
+            right : -660px;
+            z-index: 10;
+            display: none;
+            text-align: left;
+        }
+        .sysmenu_bar li:nth-child(9) .nav_table{
+            width: 300px;
+        }
+        .sysmenu_bar li:nth-child(10) .nav_table{
+            width: 100px;
+        }
+        .sysmenu_bar .nav_table .nav_two a{
+            color: #6B6B6B;
+        }
+        .sysmenu_bar .nav_table .nav_two{
+            font-size: 14px;
+            line-height: 30px;margin-left: 8px;font-weight: bold;
+            padding: 0 18px 10px 10px;
+            float: left;
+        }
+        .sysmenu_bar .nav_table .nav_two li:hover a{
+            color: #7F5B42;text-decoration: underline;
+        }
+        .sysmenu_bar .nav_table .nav_three{
+            float: left;
+            text-align: left;
+            font-size: 12px;
+        }
+        .sysmenu_bar .nav_table .nav_three li{
+            line-height:31px;
+        }
+        .sysmenu_bar .nav_table .nav_three a{
+            padding: 0 3px;
+            color: #6b6b6b;
+        }
+        .sysmenu_bar .nav_table .nav_three a:hover{
+            color: #fff;background: #b2a89e;
+        }
+    </style>
+
+<div class="head">
+    <div class="head_logo">
+        <a href="index.html"><img src="../image/dapu_homelogo.png" alt=""></a>
+    </div>
+    <div class="right_bar">
+        <div class="login_bar">
+            <a href="login.html">登录</a>
+            <span>|</span>
+            <a href="signup.html">注册</a>
+        </div>
+        <div class="cart_bar">
+            <a href="#"><img src="../image/dapu_minicart.png" alt="">
+                <span class="cart_number">2</span>
+                <div class= "cart_shop">购物车里面暂时没有商品</div>
+            </a>
+        </div>
+        <div class="search_bar">
+            <input type="text" class="search_key" placeholder="想要买什么？">
+        </div>
+    </div>
+    <ul class="sysmenu_bar">
+        <li class="nav_one_on">
+            <a href="#"><span>首页</span></a>
+        </li>
+        <li class="nav_one_on">
+            <a href="gallery-393.html"><span>大朴优选</span></a>
+            <div class="nav_table">
+                <ul class="nav_two">
+                    <li><a href="#">新农鲜果</a></li>
+                    <li><a href="#">烹饪食材</a></li>
+                    <li><a href="#">特色美食</a></li>
+                    <li><a href="#">茶艺生活</a></li>
+                    <li><a href="#">居家必备</a></li>
+                </ul>
+                <ul class="nav_three">
+                    <li>
+                        <a href="#">冬枣</a>
+                    </li>
+                    <li>
+                        <a href="#">生鲜肉食</a>
+                        <a href="#">野生菌菇</a>
+                    </li>
+                    <li>
+                        <a href="#">干果坚果</a>
+                        <a href="#">风干美食</a>
+                    </li>
+                    <li>
+                        <a href="#">茶滋茶味</a>
+                        <a href="#">创意礼品杯</a>
+                    </li>
+                    <li>
+                        <a href="#">智能台灯/睡眠仪</a>
+                        <a href="#">净水仪</a>
+                        <a href="#">空气净化器</a>
+                        <a href="#">智能牙刷</a>
+                    </li>
+                </ul>
+            </div>
+        </li>
+        <li class="nav_one_on">
+            <a href="woshi.html"><span>卧室用品</span></a>
+            <div class="nav_table">
+                <ul class="nav_two">
+                    <li><a href="#">床品件套</a></li>
+                    <li><a href="#">被子枕头</a></li>
+                    <li><a href="#">夏凉床品</a></li>
+                    <li><a href="#">家居拖鞋</a></li>
+                    <li><a href="#">智能家居</a></li>
+                </ul>
+                <ul class="nav_three">
+                    <li>
+                        <a href="#">花鸟件套</a>
+                        <a href="#">四件套/三家套</a>
+                            <a href="#">床单/床笠</a>
+                        <a href="#">枕巾/枕套</a>
+                            <a href="#">被罩</a>
+                        <a href="#">靠垫/靠垫套</a>
+                            <a href="#">毯子/毛巾被</a>
+                    </li>
+                    <li>
+                        <a href="#">夏凉被</a>
+                        <a href="#">秋冬凉被</a>
+                        <a href="#">枕头</a>
+                        <a href="#">床垫</a>
+                    </li>
+                    <li>
+                        <a href="#">老粗布系列</a>
+                        <a href="#">亚麻/棉麻凉被</a>
+                        <a href="#">蔺草席</a>
+                    </li>
+                    <li>
+                        <a href="#">家居拖鞋</a>
+                    </li>
+                    <li>
+                        <a href="#">止鼾枕</a>
+                    </li>
+                </ul>
+            </div>
+        </li>
+        <li class="nav_one_on">
+            <a href="#"><span>浴室用品</span></a>
+            <div class="nav_table">
+                <ul class="nav_two">
+                    <li><a href="#">毛巾浴巾</a></li>
+                    <li><a href="#">地巾地毯</a></li>
+                    <li><a href="#">浴室拖鞋</a></li>
+                </ul>
+                <ul class="nav_three">
+                    <li>"
+                        <a href="#">洗浴套装</a>
+                        <a href="#">毛巾</a>
+                            <a href="#">方巾</a>
+                        <a href="#">浴巾/浴袍</a>
+                        </li>
+                        <li>
+                            <a href="#">地巾地毯</a>
+                    </li>
+                    <li>
+                        <a href="#">浴室拖鞋</a>
+                    </li>
+                </ul>
+            </div>
+        </li>
+        <li class="nav_one_on">
+            <a href="#"><span>清洁用品</span></a>
+            <div class="nav_table">
+                <ul class="nav_two">
+                    <li><a href="#">个护清洁</a></li>
+                    <li><a href="#">净化空气</a></li>
+                    <li><a href="#">日常用品</a></li>
+                    <li><a href="#">洗涤用品</a></li>
+                </ul>
+                <ul class="nav_three">
+                    <li>
+                        <a href="#">纸品/棉柔巾/棉签</a>
+                    </li>
+                    <li>
+                        <a href="#">竹炭包</a>
+                    </li>
+                    <li>
+                        <a href="#">围裙</a>
+                    </li>
+                    <li>
+                        <a href="#">洗衣液/果蔬净/餐具净</a>
+                    </li>
+                </ul>
+            </div>
+        </li>
+        <li class="nav_one_on">
+            <a href="#"><span>服饰</span></a>
+            <div class="nav_table">
+                <ul class="nav_two">
+                    <li><a href="#">女装</a></li>
+                    <li><a href="#">男装</a></li>
+                </ul>
+                <ul class="nav_three">
+                    <li>
+                        <a href="#">T恤/背心</a>
+                        <a href="#">衬衫</a>
+                        <a href="#">裤子</a>
+                        <a href="#">裙子</a>
+                        <a href="#">卫衣/毛衫</a>
+                        <a href="#">居家服</a>
+                    </li>
+                    <li>
+                        <a href="#">T恤</a>
+                        <a href="#">衬衫</a>
+                        <a href="#">卫衣/毛衫</a>
+                        <a href="#">裤子</a>
+                        <a href="#">家居服</a>
+                    </li>
+                </ul>
+            </div>
+        </li>
+        <li class="nav_one_on">
+            <a href="#"><span>贴身衣物</span></a>
+            <div class="nav_table">
+                <ul class="nav_two">
+                    <li><a href="#">女士内衣</a></li>
+                    <li><a href="#">女士袜子</a></li>
+                    <li><a href="#">男士内衣</a></li>
+                    <li><a href="#">男士袜子</a></li>
+                </ul>
+                <ul class="nav_three">
+                    <li>
+                        <a href="#">内裤</a>
+                        <a href="#">文胸</a>
+                        <a href="#">保暖内衣</a>
+                    </li>
+                    <li>
+                        <a href="#">女袜</a>
+                    </li>
+                    <li>
+                        <a href="#">内裤</a>
+                    </li>
+                    <li>
+                        <a href="#">男袜</a>
+                    </li>
+                </ul>
+            </div>
+        </li>
+        <li class="nav_one_on">
+            <a href="#"><span>婴童用品</span></a>
+            <div class="nav_table">
+                <ul class="nav_two">
+                    <li><a href="#">婴童鞋子</a></li>
+                    <li><a href="#">婴童床品</a></li>
+                    <li><a href="#">婴童洗浴</a></li>
+                    <li><a href="#">婴童衣物</a></li>
+                    <li><a href="#">亲子系列</a></li>
+                </ul>
+                <ul class="nav_three">
+                    <li>
+                        <a href="#">婴童家居鞋</a>
+                    </li>
+                    <li>
+                        <a href="#">床品件套</a>
+                        <a href="#">婴童凉席</a>
+                        <a href="#">抱毯/毯子/睡袋</a>
+                        <a href="#">婴童枕头</a>
+                        <a href="#">尿布/隔尿垫</a>
+                    </li>
+                    <li>
+                        <a href="#">浴巾/浴袍</a>
+                        <a href="#">儿童方巾</a>
+                        <a href="#">儿童毛巾</a>
+                    </li>
+                    <li>
+                        <a href="#">上衣</a>
+                        <a href="#">裤子</a>
+                        <a href="#">内裤</a>
+                        <a href="#">袜子</a>
+                        <a href="#">新生儿礼盒</a>
+                        <a href="#">连体衣/套装</a>
+                    </li>
+                    <li>
+                        <a href="#">亲子玩具</a>
+                        <a href="#">亲子灯</a>
+                    </li>
+                </ul>
+            </div>
+        </li>
+        <li class="nav_one_on">
+            <a href="#"><span>包袋/周边</span></a>
+            <div class="nav_table">
+                <ul class="nav_two">
+                    <li><a href="#">置物布包</a></li>
+                    <li><a href="#">棉仔周边</a></li>
+                </ul>
+                <ul class="nav_three">
+                    <li>
+                        <a href="#">购物袋/零钱包/杂物包</a>
+                    </li>
+                    <li>
+                        <a href="#">棉仔公仔</a>
+                        <a href="#">棉仔衍生品</a>"
+                    </li>
+                </ul>
+            </div>
+        </li>
+        <li class="nav_one_on">
+            <a href="#"><span>渠道客户</span></a>
+            <div class="nav_table">
+                <ul class="nav_two">
+                    <li><a href="#">礼品卡</a></li>
+                    <li><a href="#">线下加盟</a></li>
+                </ul>
+            </div>
+        </li>
+        <li class="nav_one_on " id="last_bg"><a href="#"><span>关于大朴</span></a></li>
+        <div class="nav_show_bg"></div>
+    </ul>
+</div>

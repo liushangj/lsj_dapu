@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="http://s.dapuimg.com/favicon.ico" type="image/x-icon">
+    <title>大朴欢迎您，请登录！</title>
+    <link rel="stylesheet" href="../css/reset.css" type="text/css">
+    <link rel="stylesheet" href="../css/mock_head_footer.css" type="text/css">
+    <link rel="stylesheet" href="../css/login.css" type="text/css">
+    <script src="../js/template_head_footer.js"></script>
+    <script src="../js/carousel.js"></script>
+    <script src="../lib/jquery/jquery-1.12-4.min.js"></script>
+    <script src="../lib/arttemplate/template-native.js"></script>
+</head>
+<body>
+
+<div class="main">
+    <div class="top"> <list-itime id="header"></list-itime> </div>
+
+    <!------------------------------- main ------------------------------------->
+    <div class="login_main">
+        <div class="main_bg">
+            <div class="login_box">
+                <div>
+                    <h3 class="login_title">用户登录</h3>
+                    <div class="bd">
+                        <form action="" method="" id="loginbar" class="form_horizontal">
+                            <div class="control_group">
+                                <label class="control_label" for= "uname">用户名：</label>
+                                <div class="controls">
+                                    <input type="text" name="uname"  id="uname" maxlength="50" onblur="this.style.border='1px solid #dad9d9'">
+                                    <span class="login_info" id="check_name">请输入用户名</span>
+                                </div>
+                            </div>
+                            <div class="control_group">
+                                <label class="control_label" for="psd">密码：</label>
+                                <div class="controls">
+                                    <input type="text" name="psd"  id="psd" maxlength="50" onblur="this.style.border='1px solid #dad9d9'">
+                                    <span class="login_info" id="check_psd">请输入密码</span>
+                                </div>
+                            </div>
+                            <div class="control_group">
+                                <div class="controls">
+                                    <input type="button" value="登录" class="btu" tabindex="4">
+                                    <a href="#" target="_self" style="color: #4e8fc2" >忘记密码</a>
+                                </div>
+                            </div>
+                            <p>
+                                <a href="#" class="mlogin">手机验证码登录</a>
+                                &nbsp;|&nbsp;
+                                <a href="signup.html" class="reg">免费注册</a>
+                            </p>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="login_footer">  <list-itime id="footer"></list-itime> </div>
+</div>
+
+<script>
+    $(function () {
+        //失去焦点显示.info
+        $(".controls").find("input").blur(function () {
+            if ( this.value === ''){
+                $(this).parents(".controls").find(".login_info").show();
+            }else { $(this).parents(".controls").find(".login_info").hide();}
+        }).focus(function () {
+            $(this).parents(".controls").find(".login_info").hide();
+        });
+        if( event.keyCode === 13){
+            if ( this.value === ''){
+                $(this).parents(".controls").find(".login_info").show();
+            }else { $(this).parents(".controls").find(".login_info").hide();}
+        }
+
+        //验证登录
+
+
+    })
+</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

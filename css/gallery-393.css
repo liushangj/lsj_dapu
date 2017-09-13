@@ -1,0 +1,301 @@
+.main{
+    width: 1200px;margin: 0 auto;
+}
+.shop_main{
+    overflow: hidden;
+}
+.shop_main .header_f1{
+    padding: 10px 0 10px 5px;
+    line-height: 14px;
+    color: #BABABA;
+    font-size: 13px;
+    width: 100%;
+}
+.header_f1 a{
+    color: #615146;
+    margin-right: 6px;
+    float: left;
+}
+.header_f1 em{
+    padding: 0 3px;
+    font-weight: bold;
+}
+.header_f1 a:hover{
+    text-decoration: underline;
+}
+
+    /********************************* aside ********************************/
+.aside {
+    width: 230px;float: left;
+}
+        /************ sort_list **********/
+.aside .sort_list{
+    margin-bottom: 10px;
+    border: 1px solid #dcdcdc;
+    text-align: left;
+}
+.sort_list .hd{
+    padding: 0 0 30px 11px ;
+    background: #aa998d;
+}
+.sort_list .title{
+    float: left;
+    padding-right: 10px;
+    color: #615046;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 30px;
+}
+.sort_list .bd{
+    background: #FBF9F9;
+    border: 1px solid #aa998d;
+}
+.sort_list .item p{
+    background: #edeae8;
+    border-top: 1px solid #cec0b7;
+    font-weight: 700;
+    height: 28px;
+    border-bottom: 1px solid #e7e1dd;
+    line-height: 28px;
+    cursor: pointer;
+    display: block;
+    position: relative;
+}
+.sort_list a{
+    display: block;
+    color: #615146;
+    padding-left: 20px;
+}
+.sort_list .item p b{
+    right: 17px;
+    position: absolute;
+    height: 4px;
+    top: 13px;
+    overflow: hidden;
+    width: 5px;
+    background: url("../image/bg37.png");
+}
+        /*********** recent_item ************/
+.recent_item{
+    margin: 0 0 10px;
+    border: 1px solid #d1d0d0;
+}
+.recent_item .mod_hd{
+    margin: 0 10px ;
+    padding: 0 0 28px;
+    border-bottom: 1px solid #bfbebe;
+}
+.mod_hd h2{
+    float: left;
+    height: 28px;
+    padding-right: 10px;
+    border-bottom: 1px solid #6f594a;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 28px;
+}
+.recent_item .items{
+    overflow: hidden;
+    padding: 0 10px;
+    line-height: 20px;
+}
+.recent_item .items li{
+    overflow: hidden;
+    border-bottom: 1px solid #e9e7e7;
+    padding: 5px 0;
+}
+.recent_item .items .goodpic{
+    width: 50px;
+    height: 50px;
+    float: left;
+    text-align: center;
+}
+.goodpic a{
+    background: transparent;
+    display: block;overflow: hidden;
+    width: auto;
+    height: auto;
+}
+.items .pic_info{
+    width: 98px;
+    height: 60px;
+    line-height: 20px;
+    overflow: hidden;
+    float: left;
+    margin: 0 5px;
+}
+.items .pic_info .name{
+    height: 40px;
+   overflow: hidden;
+    display: block;
+    float: left;
+}
+a{
+    color: #6b6b6b;
+}
+.textright{
+    text-align: right;
+}
+.clearAll{
+    text-decoration: underline;
+    cursor: pointer;
+}
+/*********** bfd_list ************/
+.bfd_list{
+    border: 1px solid #dcdcdc;
+    margin: 10px 0 ;
+    overflow: hidden;
+    width: 100%;
+}
+.bfd_list h3{
+    background: #dcdcdc;
+    font-weight: bold;
+    line-height: 33px;
+    margin-bottom: 15px;
+    text-align: left;
+    color: #7F5B42;
+    padding-left: 4px;
+}
+.bfd_list ul{
+    margin: 1px;
+}
+.bfd_list ul li{
+    margin-top: 15px;
+}
+.bfd_list .bfd_item_img{
+    width: 100%;
+    color: #333;
+
+}
+.bfd_item_name{
+    line-height: 18px;
+    margin: 0 auto 6px auto;
+    text-align: center;
+    width: 100%;
+    overflow: hidden;
+}
+.bfd_item_name a{
+    color: #333;
+    text-align: left;
+    list-style: none outside none;
+}
+.bfd_item_price{
+    text-align: center;
+    color: #7F5B42;
+}
+/***************************** main_con ****************************/
+.main_con{
+    float: right;
+    width: 960px;
+    margin-bottom: 10px;
+    overflow: hidden;
+}
+.controls{
+    padding-bottom: 15px;
+}
+.controls .hd{
+    padding: 0 0 34px;
+    border-bottom: 1px solid #bfbebe;
+    line-height: 34px;
+    clear: both;
+}
+.controls h2{
+    float: left;
+    padding-right: 10px;
+    border-bottom: 1px solid #6b6b6b;
+    font-size: 14px;
+    font-weight: 700;
+}
+.controls .reset{
+    float: right;
+    color: #4e8fc2;
+}
+.filter{
+    clear: both;
+    height: 32px;
+    margin: 0 0 10px;
+    padding: 10px 10px 0;
+    background: url("../image/bg37.png") repeat-x 0 0;
+    border-top: 1px solid #e6e6e6;
+}
+.filter dl {
+    float: left;
+}
+.filter dt{
+    float: left;
+}
+.filter dd{
+    float: left;position: relative;
+    width: 40px;
+    padding-left: 5px;
+}
+.sideborder{
+    border: 1px solid #dddddd;
+    overflow: hidden;
+}
+.goods_spec_pic{
+    width: 218px;height: 218px;float: left;
+}
+.review_module{
+    width: 218px;height: 218px;
+    overflow: hidden;
+}
+.review_module img{
+    opacity: 1;
+    transition: all 1s linear;
+    transform: scale(1);
+}
+.review_module img:hover{
+    transition: all 1s linear;
+    transform: scale(1.05);
+}
+.picscroll{
+    padding: 1px 0;
+    float: none;
+    margin: 10px 0 10px 0;
+}
+.picscroll .goods_detail_pic_thumbnail{
+    margin: 0 8px;
+    position: absolute;
+    display: inline;
+}
+.picscroll .pics{
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+    width: 215px;
+    float: left;
+    margin-top: 10px;
+    background: #fff;
+}
+.goods_detail_pic_thumbnail{
+    height: 40px;
+}
+.picscroll .goods_detail_pic_thumbnail li{
+    float: left;
+    margin: 0 3px;
+    width: 40px;
+    position: relative;
+}
+.picscroll .goods_detail_pic_thumbnail a{
+    display: block;
+    border: 0px solid white;
+    overflow: hidden;
+    outline: 0;
+}
+.goodtext{
+    bottom: 2px;
+    text-align: center;width: 218px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
