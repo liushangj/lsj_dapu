@@ -56,6 +56,40 @@
 .score_wrap li { text-align: center; float: left; position: relative; width: 33%; }
 .score_wrap .score_num { font-size: 18px; color: #b1544f; line-height: 30px; }
 .score_wrap .score_name { line-height: 30px; }
-.score_wrap .score_tag_right { position: absolute; width: 0; height: 30px; }
+.score_wrap .score_tag_right, .score_wrap .score_tag_left { position: absolute; width: 0; height: 30px; top: 15px; right: 30px; border-right: 1px solid #dcdcdc; }
+.score_wrap .score_tag_left { right: 0; left: 30px; }
+
+/****** size *****/
+.goods_spec { padding: 10px 8px; background: #f6f5f3; height: auto; line-height: 180%; overflow: hidden; }
+.goods_spec label { padding: 0; float: left; margin-top: 3px; }
+.goods_spec span { color: #333; cursor: pointer; display: block; }
+.goods_spec .check { padding: 0 3px; font-weight: bold; color: #333; }
+.goods_spec li { float: left; margin: 3px 5px 3px 0; }
+.goods_spec a { border: 1px solid #ccc; display: block; position: relative; overflow: hidden; }
+.goods_spec a span { padding: 1px 6px; line-height: 15px; white-space: nowrap; }
+.goods_spec a i { display: none; background: url("../image/dapu_item_sel.png") no-repeat 0 0; height: 12px; overflow: hidden; width: 12px; position: absolute; bottom: -1px; right: -1px; }
+
+/********** number ***********/
+.buyinfo { margin: 5px 0; line-height: 23px; }
+.buyinfo label { display: block; float: left; height: 23px; color: #333; vertical-align: middle; }
+.buyinfo .numinput { display: inline-block; margin-left: 3px; height: 19px; }
+.buyinfo li { float: left; padding: 0 3px; }
+.buyinfo .minus { background-position: 0 0; bottom: -1px; right: 0; position: relative; cursor: pointer; display: block; }
+.buyinfo input { height: 17px; line-height: 17px; width: 24px; text-align: center; float: left; border: 1px solid #b4b4b4; background: url("../image/Numinput-bj.gif") no-repeat 0 0; display: block; }
+
+.numinput .add { background-position: 0 0; top: 0; right: 0; }
+.numinput .numadjust { cursor: pointer; display: block; overflow: hidden; position: relative; width: 18px; }
+
+/********* tocart **********/
+.hightline { margin: 0 0 8px 0; padding: 13px 0 0 0; text-align: center; border-top: 1px solid #e6e6e6; }
+.hightline .tocart { display: block; overflow: hidden; float: left; }
+.hightline .btu_buy { background: url("../image/gouwuche_newbtn.png") no-repeat; width: 160px; height: 46px; margin-right: 5px; outline: none; border: none; }
+
+.qrcode_box { position: relative; float: right; text-align: left; width: 200px; cursor: pointer; }
+.qrcode_box .qrcode_text { font-size: 14px; line-height: 30px; color: #000; background: #f5f3f2; border: 1px solid #dcdcdc; cursor: pointer; }
+.qrcode_box .qrcode_min { display: block; position: absolute; right: 30px; top: 5px; background: url("../image/weixin.png") no-repeat center; width: 20px; height: 20px; }
+.qrcode_box .down_icon { position: absolute; top: 12px; right: 10px; overflow: hidden; width: 0; height: 0; border-top: 9px solid #808080; border-left: 5px solid #f5f3f2; border-right: 5px solid #f5f3f2; }
+
+.qrcode_img { width: 178px; height: 150px; padding: 10px 10px; position: absolute; border: 1px solid #dcdcdc; border-top: none; top: 30px; display: none; background: url("../image/weixin2.png") no-repeat center; }
 
 /*# sourceMappingURL=product_1927.css.map */
