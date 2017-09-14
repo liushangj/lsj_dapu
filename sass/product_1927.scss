@@ -1,6 +1,5 @@
 .main_f1{
   position: relative;
-  margin: 10px;
   overflow: hidden;
 }
 .crumb{
@@ -25,6 +24,7 @@
   @extend .prod_details;
   .main_info{
     padding-top: 15px;
+    padding-bottom: 15px;
     overflow: hidden;
   }
 }
@@ -295,7 +295,7 @@
   padding: 13px 0 0 0;
   text-align: center;
   border-top: 1px solid #e6e6e6;
-  .tocart{ display: block;overflow: hidden ;float: left}
+  .tocart{ display: block;float: left;position: relative}
   .btu_buy{
     background: url("../image/gouwuche_newbtn.png") no-repeat;
     width: 160px;height: 46px;
@@ -346,8 +346,203 @@
   top: 30px;display: none;
   background: url("../image/weixin2.png") no-repeat center;
 }
+    /*****************************************************/
+    /**************** product_info_box *****************/
+.border_dcdcdc{
+  border: 1px solid #dcdcdc;
+}
+.hide{
+    display: none;
+}
+.show{
+    display: block;
+}
+.product_info_box{
+    margin-top: 30px;
+    .table_left{
+      width: 190px;
+      float: left;
+      position: relative;
+    }
+    /****** cat_list ******/
+    .cat_list{
+        margin-bottom: 10px;
+        h3{
+            background: #f6f5f3;
+            font-weight: bold;
+            line-height: 30px;
+            text-align: left;
+            color: #605046;
+            padding-left: 20px;
+        }
+        li{
+            float: left;
+            width: 55px;
+            margin-left: 18px;
+            height: 30px;
+            line-height: 30px;
+            overflow: hidden;
+            font-weight: bold;
+            a{
+                color: #605046;
+          }
+        }
+    }
+    /******** may_like , hot_sale ********/
+    .more_box{
+        margin-bottom: 10px;
+        position: relative;
+        h3{
+            background: #f6f5f3;
+            font-weight: bold;
+            line-height: 30px;
+            text-align: left;
+            color: #605046;
+            padding-left: 20px;
+        }
+         .bfd_dtimg_logo{
+                float: right;
+                width: 101px;
+                height: 13px;
+                margin: -21px 0 0 70px;
+                position: absolute;
+              background: url("../image/bfd_logo_ch.png") no-repeat;
+              overflow: hidden;
+          }
+        .box_c{
+            .pic_c{
+                display: block;
+                margin: 4px auto;
+                width: 156px;
+                height: 156px;
+            }
+            h4{
+                width: 128px;
+                line-height: 20px;
+                margin: 5px auto 0;
+                word-wrap: break-word;
+                &:hover a{
+                    color: #7f5b42;
+                  text-decoration: underline;
+                }
+            }
+            .p_text{
+                height: 12px;
+                line-height: 12px;
+                padding: 7px 0;
+                text-align: center;
+                color: #7f5b42;
+              font-weight: bold;
+            }
+        }
+    }
+  /*************** prod_desc ****************/
+    .tab_right{
+        width: 1000px;
+        float: right;
+        position: relative;
+        .fix{
+            position: fixed;
+            top: 0;
+            width: 962px !important;
+            padding: 10px 0 0 38px !important;
+            border-bottom: 1px solid #dcdcdc;
+        }
+        .tab_nav {
+            padding: 0 0 28px 38px;
+            width: 100%;
+            li{
+                margin: 0 2px -1px 0;
+                float: left;
+                height: 29px;
+                padding-left: 15px;
+                cursor: pointer;
+                background: url("../image/tab-bg.png") no-repeat 0 0;
+                background-position:  0  -80px;
+                span{
+                    float: left;
+                    height: 29px;
+                    line-height: 29px;
+                    padding-right: 15px;
+                    font-size: 14px;
+                    font-weight: 700;
+                     background: url("../image/tab-bg.png") no-repeat 0 0;
+                    background-position:  right -120px;
+                }
+            }
+            .on{
+                background-position: 0 0;
+                span{
+                    background-position: right -40px;
+                    color: #615146;
+                }
+            }
+        }
+        .tab_con{
+            padding: 10px 16px 20px 14px;
+        }
+        img{
+            display: block;
+        }
 
-
+    }
+}
+/*************** mini_cart ****************/
+.mini_cart{
+    display: none;
+    position: absolute;
+    z-index: 999;
+    background: white;
+    width: 331px;
+    height: 170px;
+    border: 1px solid #ddd;
+    box-shadow: 0 0 10px #000;
+    border-radius: 15px;
+    padding: 35px;
+    top:383px;
+    left: 465px;
+    .title{
+        display: block;
+        font-weight: bold;
+        font-size: 25px;
+        height: 34px;
+        text-align: center;
+        line-height: 34px;
+        color: #736459;
+        padding: 21px 20px 20px 26px ;
+        background: url("../image/dui.jpg") no-repeat 40px 50%;
+        text-shadow: 1px 1px 0 white;
+    }
+    span.close{
+        padding-right: 10px;
+        position: absolute;
+        margin-left: 330px;
+        margin-top: -30px;
+        display: block;
+        float: right;
+        top: 50px;
+        .btu_close{
+            margin: 2px 5px 0 0 ;
+            cursor: pointer;
+            border: 0 none;
+            width: 16px;
+            height: 16px;
+            background: url("../image/cha.jpg") no-repeat;
+        }
+    }
+    .popup_con{
+        padding: 10px 5px ;
+        text-align: center;
+        height: 90px;
+        .p10{
+            padding: 10px;
+        }
+    }
+    .min_btu{
+        width: 70%;
+        display: inline-block;
+    }
+}
 
 
 

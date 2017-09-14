@@ -1,4 +1,4 @@
-.main_f1 { position: relative; margin: 10px; overflow: hidden; }
+.main_f1 { position: relative; overflow: hidden; }
 
 .crumb { padding-bottom: 10px; }
 .crumb span { color: #cecece; float: left; margin: 0 6px; }
@@ -7,7 +7,7 @@
 .prod_details, .goods_action { overflow: hidden; }
 
 .goods_action { position: relative; border: 1px solid #dcdcdc; }
-.goods_action .main_info { padding-top: 15px; overflow: hidden; }
+.goods_action .main_info { padding-top: 15px; padding-bottom: 15px; overflow: hidden; }
 
 .prod_carousel { width: 350px; float: left; height: 500px; margin: 0 25px; }
 
@@ -82,7 +82,7 @@
 
 /********* tocart **********/
 .hightline { margin: 0 0 8px 0; padding: 13px 0 0 0; text-align: center; border-top: 1px solid #e6e6e6; }
-.hightline .tocart { display: block; overflow: hidden; float: left; }
+.hightline .tocart { display: block; float: left; position: relative; }
 .hightline .btu_buy { background: url("../image/gouwuche_newbtn.png") no-repeat; width: 160px; height: 46px; margin-right: 5px; outline: none; border: none; }
 
 .qrcode_box { position: relative; float: right; text-align: left; width: 200px; cursor: pointer; }
@@ -91,5 +91,45 @@
 .qrcode_box .down_icon { position: absolute; top: 12px; right: 10px; overflow: hidden; width: 0; height: 0; border-top: 9px solid #808080; border-left: 5px solid #f5f3f2; border-right: 5px solid #f5f3f2; }
 
 .qrcode_img { width: 178px; height: 150px; padding: 10px 10px; position: absolute; border: 1px solid #dcdcdc; border-top: none; top: 30px; display: none; background: url("../image/weixin2.png") no-repeat center; }
+
+/*****************************************************/
+/**************** product_info_box *****************/
+.border_dcdcdc { border: 1px solid #dcdcdc; }
+
+.hide { display: none; }
+
+.show { display: block; }
+
+.product_info_box { margin-top: 30px; /****** cat_list ******/ /******** may_like , hot_sale ********/ /*************** prod_desc ****************/ }
+.product_info_box .table_left { width: 190px; float: left; position: relative; }
+.product_info_box .cat_list { margin-bottom: 10px; }
+.product_info_box .cat_list h3 { background: #f6f5f3; font-weight: bold; line-height: 30px; text-align: left; color: #605046; padding-left: 20px; }
+.product_info_box .cat_list li { float: left; width: 55px; margin-left: 18px; height: 30px; line-height: 30px; overflow: hidden; font-weight: bold; }
+.product_info_box .cat_list li a { color: #605046; }
+.product_info_box .more_box { margin-bottom: 10px; position: relative; }
+.product_info_box .more_box h3 { background: #f6f5f3; font-weight: bold; line-height: 30px; text-align: left; color: #605046; padding-left: 20px; }
+.product_info_box .more_box .bfd_dtimg_logo { float: right; width: 101px; height: 13px; margin: -21px 0 0 70px; position: absolute; background: url("../image/bfd_logo_ch.png") no-repeat; overflow: hidden; }
+.product_info_box .more_box .box_c .pic_c { display: block; margin: 4px auto; width: 156px; height: 156px; }
+.product_info_box .more_box .box_c h4 { width: 128px; line-height: 20px; margin: 5px auto 0; word-wrap: break-word; }
+.product_info_box .more_box .box_c h4:hover a { color: #7f5b42; text-decoration: underline; }
+.product_info_box .more_box .box_c .p_text { height: 12px; line-height: 12px; padding: 7px 0; text-align: center; color: #7f5b42; font-weight: bold; }
+.product_info_box .tab_right { width: 1000px; float: right; position: relative; }
+.product_info_box .tab_right .fix { position: fixed; top: 0; width: 962px !important; padding: 10px 0 0 38px !important; border-bottom: 1px solid #dcdcdc; }
+.product_info_box .tab_right .tab_nav { padding: 0 0 28px 38px; width: 100%; }
+.product_info_box .tab_right .tab_nav li { margin: 0 2px -1px 0; float: left; height: 29px; padding-left: 15px; cursor: pointer; background: url("../image/tab-bg.png") no-repeat 0 0; background-position: 0  -80px; }
+.product_info_box .tab_right .tab_nav li span { float: left; height: 29px; line-height: 29px; padding-right: 15px; font-size: 14px; font-weight: 700; background: url("../image/tab-bg.png") no-repeat 0 0; background-position: right -120px; }
+.product_info_box .tab_right .tab_nav .on { background-position: 0 0; }
+.product_info_box .tab_right .tab_nav .on span { background-position: right -40px; color: #615146; }
+.product_info_box .tab_right .tab_con { padding: 10px 16px 20px 14px; }
+.product_info_box .tab_right img { display: block; }
+
+/*************** mini_cart ****************/
+.mini_cart { display: none; position: absolute; z-index: 999; background: white; width: 331px; height: 170px; border: 1px solid #ddd; box-shadow: 0 0 10px #000; border-radius: 15px; padding: 35px; top: 383px; left: 465px; }
+.mini_cart .title { display: block; font-weight: bold; font-size: 25px; height: 34px; text-align: center; line-height: 34px; color: #736459; padding: 21px 20px 20px 26px; background: url("../image/dui.jpg") no-repeat 40px 50%; text-shadow: 1px 1px 0 white; }
+.mini_cart span.close { padding-right: 10px; position: absolute; margin-left: 330px; margin-top: -30px; display: block; float: right; top: 50px; }
+.mini_cart span.close .btu_close { margin: 2px 5px 0 0; cursor: pointer; border: 0 none; width: 16px; height: 16px; background: url("../image/cha.jpg") no-repeat; }
+.mini_cart .popup_con { padding: 10px 5px; text-align: center; height: 90px; }
+.mini_cart .popup_con .p10 { padding: 10px; }
+.mini_cart .min_btu { width: 70%; display: inline-block; }
 
 /*# sourceMappingURL=product_1927.css.map */

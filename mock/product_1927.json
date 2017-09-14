@@ -1,0 +1,16 @@
+{
+    "prod_1927_like" : [
+      { "imgSrc" : "../image/box1.jpg" , "name" : "【质造】鸡年限量款上下杯" , "price" : "￥298" , "href" : "#" },
+      { "imgSrc" : "../image/box2.jpg" , "name" : "【质造】月相杯" , "price" : "￥268" , "href" : "#" },
+      { "imgSrc" : "../image/box3.jpg" , "name" : "【质造】涌泉灌" , "price" : "￥138" , "href" : "#" },
+      { "imgSrc" : "../image/box4.jpg" , "name" : "【质造】上下杯" , "price" : "￥208" , "href" : "#" },
+      { "imgSrc" : "../image/box5.jpg" , "name" : "【质造】琢磨壶" , "price" : "￥458" , "href" : "#" }
+    ],
+    "prod_1927_hot" : [
+      { "imgSrc" : "../image/hot1.jpg" , "name" : "丸形洗衣袋" , "price" : "￥19" , "href" : "#" },
+      { "imgSrc" : "../image/hot2.jpg" , "name" : "多功能带袖被套（线下店处理）" , "price" : "￥799" , "href" : "#" },
+      { "imgSrc" : "../image/hot3.jpg" , "name" : "全工艺精梳纯棉600根绣花四件套" , "price" : "￥1899" , "href" : "#" },
+      { "imgSrc" : "../image/hot4.jpg" , "name" : "天然新疆棉针织印花四件套" , "price" : "￥769" , "href" : "#" },
+      { "imgSrc" : "../image/hot5.jpg" , "name" : "纯棉缎纹磨毛纯色四件套" , "price" : "￥599" , "href" : "#" }
+    ]
+}
