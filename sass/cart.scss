@@ -1,0 +1,323 @@
+/************* header **************/
+body{
+    font-size: 14px;
+    line-height: 20px;
+    color: #333;
+}
+.header{
+    height: 90px;
+    .logo{
+        margin-top: 25px;
+        float: left;
+    }
+    .slogan{
+        float: left;
+        margin: 50px 0 0 105px;
+        color: rgb(179,169,159);
+        font-size: 18px;
+        font-weight: 600;
+        letter-spacing: 5px;
+    }
+}
+/************** panel ****************/
+.panel{
+    position: relative;
+    margin-bottom: 20px;
+    border-radius: 4px;
+    box-shadow: 0 1px 1px rgba(0,0,0,0.5);
+    font-size: 14px;
+    /******* panel_heading **********/
+    .panel_heading{
+        color: #333;
+        background: #f5f5f5;
+        border: 1px solid #ddd;
+        padding: 10px 15px ;
+        border-top-right-radius: 3px ;
+        border-top-left-radius: 3px;
+        strong{
+            font-weight: bold;
+        }
+    }
+    /*********** panel_body *********/
+    .panel_body{
+        padding: 15px;
+        form{
+            margin: 0 0 20px;
+            display: block;
+        }
+        .shop_cart_table{
+            border: 1px solid #ddd;
+            border-collapse: separate;
+            border-left: 0;
+            border-radius: 4px;
+            max-width:100%;
+            border-spacing: 0;
+        }
+        tbody{
+            display: table-row-group;
+            vertical-align: middle;
+            border-color: inherit;
+        }
+        tr{
+            display: table-row;
+            vertical-align: inherit;
+            border-color: inherit;
+            &:first-child>th:first-child{
+                border-top-left-radius: 4px;
+            }
+            &:first-child th{
+                border-top: 0;
+            }
+            &:last-child>td:first-child{
+                border-bottom-left-radius: 4px;
+            }
+            &:last-child>td:last-child{
+                border-bottom-right-radius: 4px;
+            }
+        }
+        th{
+            border-left: 1px solid #ddd;
+            font-weight: bold;;
+            padding: 8px;
+            text-align: left;
+            vertical-align: top;
+        }
+        input[type="checkbox"]{
+            margin-top: 4px;
+            cursor: pointer;
+        }
+        input[type="text"]{
+            @extend input[type="checkbox"];
+            border: 1px solid #ccc;
+            box-shadow: inset 0 1px 1px rgba(0,0,0,0.075);
+            height: 27px;
+            width: 49px;
+            font-size: 14px;
+            line-height: 20px;
+            color: #555;
+            border-radius: 4px;
+            margin: 0;
+            padding: 4px 6px;
+        }
+        td{
+            border-left: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+            border-top: 1px solid #ddd;
+        }
+    }
+}
+.goods_item{
+    .g_checkbox{
+        display: table-cell;
+        vertical-align: middle;
+    }
+    .g_pic{
+        display: table-cell;
+        vertical-align: middle;
+        width: 100px;
+        .g_img{
+            width: 80px;
+            height: 80px;
+            border-radius: 6px;
+            border: none;
+        }
+    }
+    .g_info{
+        display: table-cell;
+        vertical-align: middle;
+        width: 400px;
+        a{
+            color: #08c;
+        }
+        p{
+            font-size: 12px;
+            color: #808080;
+            margin-bottom: 10px;
+            display: block;
+        }
+    }
+    .g_modify{
+        display: table-cell;
+        vertical-align: middle;
+        .buy_num{
+            width: 30px;
+            display: inline-block;
+            vertical-align: middle;
+        }
+    }
+    .g_total{
+        display: table-cell;
+        vertical-align: middle;
+    }
+    .g_btu{
+        display: table-cell;
+        vertical-align: middle;
+    }
+}
+.btu_danger{
+    color: #fff;
+    text-shadow: 0 -1px 0 rgba(0,0,0,0.25);
+    background: #da4f49 linear-gradient(to bottom,#ee5f5b,#bd362f) repeat-x;
+}
+.btu{
+    display: inline-block;
+    padding: 4px 12px;
+    margin-bottom: 0;
+    font-size: 14px;
+    line-height: 20px;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    border: 1px solid #ccc;
+    border-bottom-color: #b3b3b3;;
+    border-radius: 4px;
+    box-shadow: inset 0 1px 0 rgba(255,255,255,0.2), 0 1px 2px rgba(0,0,0,0.05);
+}
+.btu_default{
+    display: inline-block;
+    padding: 4px 12px ;
+    font-size: 14px;
+    line-height: 20px;
+    color: #333;
+    line-height: 20px;
+    text-align: center;
+    text-shadow: 0 1px 1px rgba(255,255,255,0.75);
+    vertical-align: middle;
+    cursor: pointer;
+    background: linear-gradient(to bottom,#fff,#e6e6e6)  repeat-x;
+    border: 1px solid #ccc;
+    border-color: rgba(0,0,0,0.1) rgba(0,0,0,0.1) rgba(0,0,0,0.25);
+    border-bottom-color: #b3b3b3;
+    border-radius: 4px;
+    box-shadow: inset 0 1px 0 rgba(255,255,255,0.2), 0 1px 2px rgba(0,0,0,0.05);
+}
+/************** panel_footer ******************/
+.panel_footer{
+    padding: 10px 5px ;
+    background-color: #f5f5f5;
+    border-top: 1px solid #ddd;
+    border-bottom-right-radius: 3px;
+    border-bottom-left-radius: 3px;
+    .alert_info{
+        color: #3a87ad;
+        background: #d9edf7;
+        border-color: #bce8f1;
+    }
+    .alert{
+        padding: 8px 35px 8px 14px;
+        margin-bottom: 20px;
+        text-shadow: 0 1px 0 rgba(255,255,255,0.5);
+        border: 1px solid #fbeed5;
+        border-radius: 4px;
+    }
+}
+h3 {
+    font-size: 24.5px;
+    line-height: 40px;
+    margin: 10px 0;
+    font-weight: bold;
+    color: inherit;
+}
+p{
+    margin: 0 0 10px;
+}
+strong{
+    font-weight: bold;
+}
+/********************************/
+/********** tab_wrap ***********/
+.hot_sale{
+    height: 306px;
+    .tab_nav{
+        padding: 0 0 28px 38px;
+        border-bottom: 1px solid #dad9d8;
+        margin: 0;
+        li{
+            background: url("/image/tab-bg.png");
+            float: left;
+            display: inline;height: 29px;
+            margin-right: 2px;
+            padding-left: 15px;
+            cursor: pointer;
+            span{
+                background: url("/image/tab-bg.png") right -40px;
+                color: #615146;
+                float: left;
+                height: 29px;
+                line-height: 29px;
+                padding-right:18px;
+                font-size: 14px;
+                font-weight: 700;
+
+            }
+        }
+    }
+    .tab_con{
+        padding: 10px 8px 0 28px;
+        .thumb_con{
+            overflow: hidden;
+            position: relative;
+            height: 240px;
+            z-index: 2;
+        }
+        .thumb_item{
+            padding: 12px 2px;
+            display: inline-block;
+            width: 155px;
+            margin: 0 20px 0 10px ;
+            position: relative;
+            text-align: center;
+        }
+    }
+}
+.thumb_item{
+    .pic{
+        width: 195px;
+        height: 170px;
+        a{ float: left}
+        img{
+            width: 165px;
+            height: 165px;
+        }
+    }
+    .name{
+        display: block;
+        overflow: hidden;
+        height: 36px;
+        line-height: 18px;
+    }
+    .price{
+        display: block;
+    }
+}
+.bfd_logo{
+    background: url("/image/bfd_logo_ch.png") no-repeat;
+    margin: 5px 6px 6px 0;
+    float: right;
+    width: 101px;
+    height: 13px;
+    overflow: hidden;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

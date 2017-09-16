@@ -1,0 +1,10 @@
+{
+  "cart_hot": [
+              { "img": "/image/h1.jpg" ,"name" : "甜睡时光 女士三层纱长袖长裤套装" , "price" : "￥449","href":"#"},
+              { "img": "/image/h2.jpg" ,"name" : "阿瓦提花隐浴巾" , "price" : "￥349" , "href":"#"},
+              { "img": "/image/h3.jpg" ,"name" : "长白山野生蓝莓干" , "price" : "￥50" , "href":"#"},
+              { "img": "/image/h4.jpg" ,"name" : "240根纯棉缎纹纯色四件套" , "price" : "￥299" , "href":"#"},
+              { "img": "/image/h5.jpg" ,"name" : "【质造】鸡年限量款上下杯" , "price" : "￥298" , "href":"#"},
+              { "img": "/image/h6.jpg" ,"name" : "【质造】月相杯" , "price" : "￥268" ,"href":"#"}
+            ]
+}

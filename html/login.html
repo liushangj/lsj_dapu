@@ -4,12 +4,14 @@
     <meta charset="UTF-8">
     <link rel="shortcut icon" href="http://s.dapuimg.com/favicon.ico" type="image/x-icon">
     <title>大朴欢迎您，请登录！</title>
-    <link rel="stylesheet" href="../css/reset.css" type="text/css">
-    <link rel="stylesheet" href="../css/login.css" type="text/css">
-    <script src="../js/carousel.js"></script>
-    <script src="../lib/jquery/jquery-1.12-4.min.js"></script>
-    <script src="../lib/arttemplate/template-native.js"></script>
-    <script src="../js/head.js"></script>
+    <link rel="stylesheet" href="/css/reset.css" type="text/css">
+    <link rel="stylesheet" href="/css/login.css" type="text/css">
+    <script src="/js/carousel.js"></script>
+    <script src="/lib/jquery/jquery-1.12-4.min.js"></script>
+    <script src="/lib/arttemplate/template-native.js"></script>
+    <script src="/lib/jquery-Plugins/jquery.cookie.js"></script>
+    <script src="/js/head.js"></script>
+    <script src="/js/login.js"></script>
 </head>
 <body>
 
@@ -40,7 +42,7 @@
                             </div>
                             <div class="control_group">
                                 <div class="controls">
-                                    <input type="button" value="登录" class="btu" tabindex="4">
+                                    <input type="button" value="登录" class="btu" tabindex="4" id="login">
                                     <a href="#" target="_self" style="color: #4e8fc2" >忘记密码</a>
                                 </div>
                             </div>
@@ -58,27 +60,6 @@
     <div class="login_footer">  <list-itime id="footer"></list-itime> </div>
 </div>
 
-<script>
-    $(function () {
-        //失去焦点显示.info
-        $(".controls").find("input").blur(function () {
-            if ( this.value === ''){
-                $(this).parents(".controls").find(".login_info").show();
-            }else { $(this).parents(".controls").find(".login_info").hide();}
-        }).focus(function () {
-            $(this).parents(".controls").find(".login_info").hide();
-        });
-        if( event.keyCode === 13){
-            if ( this.value === ''){
-                $(this).parents(".controls").find(".login_info").show();
-            }else { $(this).parents(".controls").find(".login_info").hide();}
-        }
-
-        //验证登录
-
-
-    })
-</script>
 </body>
 </html>
 

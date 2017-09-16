@@ -100,7 +100,7 @@ $(function () {
         $(".mini_cart").hide();
     });
     $(".rebuy").click(function () {
-        $
+
     })
 
 });

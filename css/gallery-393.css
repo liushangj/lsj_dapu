@@ -1,8 +1,14 @@
 .main{
     width: 1200px;margin: 0 auto;
 }
+.right{
+    z-index: 999;
+    position: fixed;
+    top: 0;
+}
 .shop_main{
     overflow: hidden;
+
 }
 .shop_main .header_f1{
     padding: 10px 0 10px 5px;

@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="http://s.dapuimg.com/favicon.ico" type="image/x-icon">
+    <title>大朴网-购物车</title>
+    <link rel="stylesheet" href="../css/reset.css" type="text/css">
+    <link rel="stylesheet" href="/css/cart.css" type="text/css">
+    <link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css">
+    <script src="/lib/requirejs/require.js" data-main="/js/cart"></script>
+</head>
+<body>
+<div class="main">
+    <div class="header">
+        <div class="logo">
+            <a href="/html/index.html">
+                <img src="../image/logo2.png" alt="大朴网" width="245" height="49" border="0">
+            </a>
+        </div>
+        <div class="slogan">无甲醛棉品，始于大朴</div>
+    </div>
+    <div class="panel" style="border-color: #ddd;">
+        <div class="panel_heading" style="text-align: right">
+            <strong style="float: left">我的购物车</strong>
+            <a href="#" class="btu btu_default">清空购物车</a>
+        </div>
+        <div class="panel_body">
+            <form action="" id="form_cart" method="post">
+                <table class="shop_cart_table" id="goodsbody">
+                    <tbody>
+                    <tr>
+                        <th width="5%">
+                            <input type="checkbox" class="selectAllGoods" name="selectAllGoods">
+                        </th>
+                        <th width="40%">商品信息</th>
+                        <th width="10%">商品单价</th>
+                        <th width="15%">商品数量</th>
+                        <th width="10%">小计</th>
+                        <th width="10%">操作</th>
+                    </tr>
+                    <tr class="goods_item">
+                        <td class="g_checkbox">
+                            <input type="checkbox" name="selectGoods" class="selectGoods">
+                        </td>
+                        <td>
+                            <div class="g_pic">
+                                <a href="#" target="_blank">
+                                    <img src="../image/c1.jpg" alt="【质造】星球杯" class="g_img">
+                                </a>
+                            </div>
+                            <div class="g_info">
+                                <a href="#" target="_blank">【质造】星球杯</a>
+                                <p class="spec_info">规格：2杯2碟/对装</p>
+                            </div>
+                        </td>
+                        <td class="g_price">
+                            <span>￥99</span>
+                        </td>
+                        <td class="g_modify">
+                            <button type="button" class="btu_default">-</button>
+                            <input type="text" id="goods_num" class="buy_num" value="1" >
+                            <button type="button" class="btu_default">+</button>
+                        </td>
+                        <td class="g_total" id="g_totalprice">￥99</td>
+                        <td class="g_btu">
+                            <a href="#" class="btu_danger btu">删除</a>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </form>
+        </div>
+        <div class="panel_footer">
+            <div id="cart_ajax_update">
+                <div class="alert_info alert">
+                    <h3>已享受的促销优惠：</h3>
+                    <p>购物满88元包邮</p>
+                </div>
+                <div style="text-align: right;">
+                    <p>原始金额：￥99</p>
+                    <p style="color: red">优惠金额：￥0</p>
+                    <p class="total"><strong>商品总金额（不含运费）:</strong>￥99</p>
+                </div>
+                <div style="text-align: right;">
+                    <a href="#" class="btu btu_default">继续购物</a>
+                    <a href="javascript:void(0)" class="btu btu_danger">去结算</a>
+                </div>
+            </div>
+        </div>
+        <div class="hot_sale" style="clear: both">
+            <ul class="tab_nav">
+                <li class="on"><span>您可能会喜欢</span></li>
+            </ul>
+            <div class="tab_con">
+                <div class="thumb_con">     </div>
+                <script type="text/html" id="cart_hot_temp">
+                    <%
+                    for ( var i = 0 ; i < hot_temps.length ; i++){
+                    var _mo = hot_temps[i];
+                    %>
+                    <div class="thumb_item">
+                        <div class="pic">
+                            <a href=<%= _mo.href %> title=<%= _mo.name %> target="_blank">
+                                <img src=<%= _mo.img %> alt="">
+                            </a>
+                        </div>
+                        <a href=<%= _mo.href %> class="name" title=<%= _mo.name %> target="_blank"> <%= _mo.name %> </a>
+                        <span class="price" style="color: #7f5b42;font-size: 12px;"> <%= _mo.price %> </span>
+                    </div>
+                    <%   }  %>
+                </script>
+            </div>
+            <a href="http://www.baifendian.com" target="_blank" class="bfd_logo"></a>
+        </div>
+    </div>
+</div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

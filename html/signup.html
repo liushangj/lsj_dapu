@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="../css/reset.css" type="text/css">
     <link rel="stylesheet" href="../css/signup.css" type="text/css">
     <script src="../lib/jquery/jquery-1.12-4.min.js"></script>
+    <script src="/lib/jquery-Plugins/jquery.cookie.js"></script>
     <script src="../lib/arttemplate/template-native.js"></script>
     <script src="../js/carousel.js"></script>
     <script src="../js/signup.js"></script>
@@ -40,17 +41,17 @@
                     </div>
                 </div>
                 <div class="field">
-                    <label for="" class="leftlabel">短信码：</label>
+                    <label  class="leftlabel">短信码：</label>
                     <div class="floatdiv">
-                        <input type="text" id="yzm" class="txt7" onfocus="this.style.border='1px solid #f9c908';document.getElementById(tishi2).style.display='inline-block'">
+                        <input type="text" id="yzm" class="txt7" onfocus="this.style.border='1px solid #f9c908';document.getElementById('tishi2').style.display='inline-block'">
                         <span id="getcodeerror" class="errormsg"></span>
                         <span id="tishi2" style="display: block;color: #ff0000;height: 28px;"></span>
                     </div>
                 </div>
                 <div class="field">
-                    <label for="" class="leftlabel">密码：</label>
+                    <label  class="leftlabel">密码：</label>
                     <div class="floatdiv">
-                        <input type="text" style="float: left" class="txt7 input-style" id="psd" maxlength="50" onfocus="this.style.border ='1px #f9c908 solid'; document.getElementById('error_pwd1').style.display = 'inline-block';">
+                        <input type="password" style="float: left" class="txt7 input-style" id="pwd" maxlength="50" onfocus="this.style.border ='1px #f9c908 solid'; document.getElementById('error_pwd1').style.display = 'inline-block';">
                     </div>
                     <div style="float: left">
                         <div id="level" class="pw-strength">
