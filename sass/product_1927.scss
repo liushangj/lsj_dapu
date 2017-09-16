@@ -188,6 +188,15 @@
     left: 30px;
   }
 }
+
+/*********** tagline ***********/
+.tagline{
+  clear: both;
+  margin: 10px 0;
+  padding: 0;
+  font-size: 14px;
+  font-weight: 700;
+}
     /****** size *****/
 .goods_spec{
   padding: 10px 8px;
@@ -213,12 +222,16 @@
   li{
     float: left;
     margin: 3px 5px 3px 0 ;
+
   }
   a{
     border: 1px solid #ccc;
     display: block;
     position: relative;
     overflow: hidden;
+    &:hover{
+        border: 1px solid #615146;
+    }
     span{
       padding: 1px 6px ;
       line-height: 15px;
@@ -305,10 +318,14 @@
   }
 }
 .qrcode_box{
-  position: relative;float: right;
+  position: relative;
   text-align: left;
   width: 200px;
   cursor: pointer;
+  right: 197px;
+  top: -91px;
+  float: right;
+
   .qrcode_text{
     font-size: 14px;
     line-height: 30px;
@@ -344,7 +361,7 @@
   border:1px solid #dcdcdc;
   border-top: none;
   top: 30px;display: none;
-  background: url("../image/weixin2.png") no-repeat center;
+  background:#fff url("../image/weixin2.png") no-repeat center;
 }
     /*****************************************************/
     /**************** product_info_box *****************/
