@@ -29,8 +29,9 @@ $(function () {
 
     //判断是否有缓存的cookie
     $.cookie.json=true;
-    var _userlists = $.cookie("userLists");
-    if(_userlists){
+    var _userlists = $.cookie("userLists") || [];
+    if(_userlists.length !== 0){
+
         var length = $(_userlists).length;
         var lastuser = $(_userlists).eq(length-1)[0];
         //显示预缓存的用户名
@@ -61,7 +62,7 @@ $(function () {
                 //保存现在这个用户信息
                 //判断之前是否有用户在登录
                 //
-                $.cookie("newUser",newuser,{expire:10,path : '/'});
+                $.cookie("newUser",newuser,{expire:10/*,path : '/'*/});
 
                 location="http://127.0.0.1:8080/html/index.html"
             }

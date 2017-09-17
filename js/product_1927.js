@@ -22,6 +22,7 @@ require( ["config"] , function () {
             var imgsrc_0 = ["../image/large1.jpg", "../image/lager2.jpg", "../image/l3.jpg", "../image/l4.jpg", "../image/l5.jpg"];
 
             $(_rightlis).on('click', function () {
+                $(this).addClass("check_size").siblings().removeClass("check_size");
                 $(this).find("i").show().parent().css('border', '1px solid #b1544f')
                     .parents("li").siblings().find("a").css('border', '1px solid #ccc').find("i").hide();
                 var index = $.inArray(this, _rightlis);

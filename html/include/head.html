@@ -452,7 +452,7 @@
                     $("#quit").html("退出").on("click" , function () {
                         $("#username").html("登录");
                         $("#quit").html("注册").attr("href" , "/html/index.html");
-                        $.removeCookie("newUser", {path:"/"});
+                        $.removeCookie("newUser");
                         return false;
                     });
                     $("#quit").attr("href" , "/html/signup.html");

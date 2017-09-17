@@ -265,4 +265,10 @@ strong {
   padding: 15px;
   display: none; }
 
+.hide {
+  display: none; }
+
+.show {
+  display: block; }
+
 /*# sourceMappingURL=cart.css.map */

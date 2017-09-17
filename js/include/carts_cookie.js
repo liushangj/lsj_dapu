@@ -77,8 +77,13 @@ require( ["config"] , function () {
 
             /*************** mini-cart ******************/
             $(".tocart input").click(function () {
-                $(".mini_cart").show();
-                return false
+                if($(".right_ul").find(".check_size").length === 0){
+                    return false;
+                }else {
+                    $(".mini_cart").show();
+                    return false;
+                }
+
             });
             $(".mini_cart .close").click(function () {
                 $(".mini_cart").hide();
@@ -106,85 +111,68 @@ require( ["config"] , function () {
 
 
             /********************** 保存cookie *************************/
+            $.cookie.json = true;
+
             $(".btu_buy").on( "click" ,function () {
+                var sizespan = $(".right_ul").find(".check_size"),
+                    _number = $("#pro_count").val();
+                if( sizespan.length === 0){
+                    alert("请选择规格！");
+                    return;
+                }
                 var product = {
-                    uname : "",
-                    prod : [{
                         id : $("#goodsBn").text(),
                         price : $(".goods_price_box em").text().slice(1),
                         imgSrc : $(".small_ul li:first-child").find("img").attr("src"),
                         name : $(".goods_name").html(),
-                        size : $(".right_ul").find(".check_size").find("span").text(),
-                        number : $("#pro_count").val(),
+                        size : $(sizespan).find("span").text(),
+                        number : _number,
                         sub : $(".goods_price_box em").text().slice(1)*$("#pro_count").val()
-                    }]
                 };
-                //判断现在登录的用户
-                if($("#username").html() !== "登录"){
-                    //现在已经登录，保存到cookie中
-                    product.uname = $("#username").html();
-                }
-
-                console.log(product);
-                //从cookie中读取保存的购物车信息
-                $.cookie.json = true;
-                //如果为新用户
-                if( product.uname === ""){
-                    //读取新用户的cookie
-                    var newproduct = $.cookie("newproduct") || [];
-                    //判断商品是否重复
-                    if ( newproduct === []){
-                        //用户第一次点击购买
-                        newproduct.push(product);
-
-                    }/*else {
-                        var new_index = indexOf( product.prod[0].id , "id" , newproduct.prod);
-                        if( new_index !== -1){
-                            //之前存在
-                            var new_oldnum = newproduct.prod[new_index].number;//之前的数量
-                            product.prod.number($("#pro_count").val()+new_oldnum);//修改现在的数量
-                        }
-                    }*/
-
-                    //保存在cookie中
-                    $.cookie("newproduct",newproduct);
-                    console.log($.cookie("newproduct"));
-
-                }/*else {
-                    //为老用户时
-                    var _products = $.cookie("products") || [];
-                    //找出当前的这个人
-                    var peo_index = indexOf( product.uname , "uname" , _products);
-                    //判断商品是否重复
-                    var prod = _products[peo_index].prod;//对应的商品信息数组
-                    //判断商品是否重复
-                    var prod_index = indexOf( product.prod.id , "id" , prod);
-                    if(prod_index !== -1){
-                        //之前存在此商品
-                        var oldnum = prod[prod_index].number;//之前的数量
-                        product.prod.number($("#pro_count").val()+oldnum);//修改现在的数量
+                var uname = $("#username").html();
+                var _product =[];
+                if ( uname === "登录"){
+                    //用户没有登录
+                    _product = $.cookie("unlogin") || [];
+                    //判断商品是否有重复的
+                    let index = indexOf( product.id , "id" , _product);
+                    if( index === -1){
+                        //不存在
+                        _product.push(product);//加入购物车数组
                     }else {
-                        //之前没有此商品
-                        _products[peo_index].prod.push(product.prod);
+                        //存在
+                        _product[index].number = Number(_number) +  Number(_product[index].number);
+                        _product[index].sub = Number( product.sub ) + Number( _product[index].sub);
+
                     }
+                    //保存到cookie中
+                    $.cookie("unlogin" , _product , { path:"/"});
 
-                    //保存在cookie中
-                    $.cookie("products" , _prosucts , {expires : 10 , path : "/"})
-                }*/
-
-
-
-
-               /* console.log("最后的保存:" ,$.cookie("products"));*/
+                    console.log($.cookie("unlogin"));
+                }else {
+                    //已经登录
+                    console.log(typeof uname);
+                    _product = $.cookie(uname) || [];
+                    console.log(_product);
+                    //判断商品是否有重复的
+                    let index = indexOf( product.id , "id" , _product);
+                    if( index === -1){
+                        //不存在
+                        _product.push(product);//加入购物车数组
+                    }else {
+                        //存在
+                        _product[index].number = Number(_number) + Number( _product[index].number) ;
+                        _product[index].sub = Number( product.sub ) + Number( _product[index].sub);
+                    }
+                    //保存到cookie中
+                    $.cookie( uname , _product , {expires:1, path:"/"});
+                    console.log($.cookie(uname));
+                }
             });
 
 
-
-
-
-
-        })
-    })
+        });
+    });
 });
 
 

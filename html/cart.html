@@ -11,14 +11,8 @@
 </head>
 <body>
 <div class="main">
-    <div class="header">
-        <div class="logo">
-            <a href="/html/index.html">
-                <img src="../image/logo2.png" alt="大朴网" width="245" height="49" border="0">
-            </a>
-        </div>
-        <div class="slogan">无甲醛棉品，始于大朴</div>
-    </div>
+    <div id="header"></div>
+
     <div class="panel" style="border-color: #ddd;">
         <div class="panel_heading" style="text-align: right">
             <strong style="float: left">我的购物车</strong>
@@ -38,7 +32,7 @@
                         <th width="10%">小计</th>
                         <th width="10%">操作</th>
                     </tr>
-                    <tr class="goods_item">
+                    <tr class="hide">
                         <td class="g_checkbox">
                             <input type="checkbox" name="selectGoods" class="selectGoods">
                         </td>
@@ -54,14 +48,14 @@
                             </div>
                         </td>
                         <td class="g_price">
-                            <span>￥99</span>
+                            <span >￥99</span>
                         </td>
                         <td class="g_modify">
-                            <button type="button" class="btu_default">-</button>
-                            <input type="text" id="goods_num" class="buy_num" value="1" >
-                            <button type="button" class="btu_default">+</button>
+                            <button type="button" class="btu_default minus_num">-</button>
+                            <input type="text" class="buy_num goods_num" value="1" >
+                            <button type="button" class="btu_default add_num">+</button>
                         </td>
-                        <td class="g_total" id="g_totalprice">￥99</td>
+                        <td class="g_total g_totalprice" >￥99</td>
                         <td class="g_btu">
                             <a href="#" class="btu_danger btu">删除</a>
                         </td>

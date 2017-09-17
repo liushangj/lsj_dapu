@@ -16,4 +16,7 @@
       </profile-state>
     </entry>
   </component>
+  <component name="ProjectPlainTextFileTypeManager">
+    <file url="file://$PROJECT_DIR$/gulpfile.js" />
+  </component>
 </project>
