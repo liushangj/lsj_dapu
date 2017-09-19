@@ -6,17 +6,12 @@
     <title>大朴欢迎您，请登录！</title>
     <link rel="stylesheet" href="/css/reset.css" type="text/css">
     <link rel="stylesheet" href="/css/login.css" type="text/css">
-    <script src="/js/carousel.js"></script>
-    <script src="/lib/jquery/jquery-1.12-4.min.js"></script>
-    <script src="/lib/arttemplate/template-native.js"></script>
-    <script src="/lib/jquery-Plugins/jquery.cookie.js"></script>
-    <script src="/js/head.js"></script>
-    <script src="/js/login.js"></script>
+    <script src="/lib/requirejs/require.js" data-main="/js/login.js"></script>
 </head>
 <body>
 
 <div class="main">
-    <div class="top"> <list-itime id="header"></list-itime> </div>
+    <div id="header"> </div>
 
     <!------------------------------- main ------------------------------------->
     <div class="login_main">
@@ -57,7 +52,7 @@
             </div>
         </div>
     </div>
-    <div class="login_footer">  <list-itime id="footer"></list-itime> </div>
+    <div id="footer">  </div>
 </div>
 
 </body>

@@ -62,13 +62,16 @@
                     </tr>
                     </tbody>
                 </table>
+                <div class="clear_check clearfix" style="margin-top: 27px;padding-right: 30px;">
+                    <a href="javascript:void (0)" class="btn btn-danger" style="float: right">删除选中行</a>
+                </div>
             </form>
         </div>
         <!------ 购物车为空时 ------->
-        <div class="cart_none">
+        <div class="cart_none_2">
             <span style="font-size: 30px;line-height: 200px;">购物车为空</span>
             <p>
-                <a href="/html/index/html" class="btn btn-info">继续购物</a>
+                <a href="/html/index.html" class="btn btn-info">继续购物</a>
             </p>
         </div>
         <div class="panel_footer">
@@ -78,13 +81,13 @@
                     <p>购物满88元包邮</p>
                 </div>
                 <div style="text-align: right;">
-                    <p>原始金额：￥99</p>
-                    <p style="color: red">优惠金额：￥0</p>
-                    <p class="total"><strong>商品总金额（不含运费）:</strong>￥99</p>
+                    <p id="or_cost">原始金额:￥0</p>
+                    <p style="color: red" id="discounts">优惠金额：￥0</p>
+                    <p class="total"><strong>商品总金额（不含运费）:</strong><b style="font-weight: normal">￥0</b></p>
                 </div>
                 <div style="text-align: right;">
-                    <a href="#" class="btu btu_default">继续购物</a>
-                    <a href="javascript:void(0)" class="btu btu_danger">去结算</a>
+                    <a href="/html/index.html" class="btu btu_default">继续购物</a>
+                    <a href="#" class="btu btu_danger">去结算</a>
                 </div>
             </div>
         </div>

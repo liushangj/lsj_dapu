@@ -45,7 +45,7 @@
             min-height: 15px;display: inline-block;
             left: 20px;top: -5px;
         }
-        .cart_bar .cart_shop{
+        .cart_bar .cart_none{
             width: 300px;height: auto;
             min-height: 25px;line-height: 30px;
             position: absolute;
@@ -59,16 +59,13 @@
             background: #fff;
             display: none;
         }
-        .head .right_bar .cart_bar:hover .cart_shop{
-            display: block;
-        }
         .head .right_bar .search_bar{
             float: right;margin-right: 11px;
         }
         .head .right_bar .search_bar .search_key{
             width: 200px;height: 20px;
             padding: 5px;
-            background:#eee url("../image/dapu_homeseach.png") no-repeat right center;
+            background:#eee url("/image/dapu_homeseach.png") no-repeat right center;
             border: none;
             color: #91847B;
             font-weight: bold;font-size: 11px;
@@ -166,6 +163,86 @@
         .sysmenu_bar .nav_table .nav_three a:hover{
             color: #fff;background: #b2a89e;
         }
+
+        /******* mini_cart *********/
+        .minicart_con{
+            background: #fff;
+            width: 300px; height: auto; min-height: 25px;
+            line-height: 30px;
+            position: absolute;
+            top: 25px;
+            right: -1px;
+            border: 1px solid rgba(110,106,105,0.78);
+            padding: 15px 15px ;
+            z-index: 5;
+            display: none;
+        }
+        .cartInfoItems{
+            border: 0;
+            background: #f7f7f7;
+            padding: 8px 8px 3px 8px ;
+            line-height: 150%;
+            text-align: right;
+        }
+        .cartInfoItems h4{
+            float: left;
+            text-align: left;
+            width: 150px;
+            font-size: 12px;
+        }
+        .micolor1{
+            color: #777;
+            font-size: 12px;
+            font-weight: 100;
+        }
+        .micolor2{
+            color: #ff6600;
+        }
+        .go{
+            float: right;
+            color: #fff;
+            width: 100px;
+            height: 21px;
+            line-height: 21px;
+            text-align: center;
+            margin-top: 15px;
+        }
+        .goodsList{
+            padding-bottom: 10px;
+            height: 50px;
+            overflow: hidden;
+        }
+        .goodsList .mini_goodspic img{
+            width: 52px;
+            height: 52px;
+            float: left;padding: 0 0 ;
+            margin: 0 0;
+            border: 1px solid #ccc;
+        }
+        .goodsList .goods_main{
+            width: 190px;
+            padding-left: 10px;
+            line-height: 16px;
+            float: left;
+            font-size: 12px;
+        }
+        .nc_name{
+            color: #6b6b6b;
+            width: 190px;
+            height: 32px;
+            overflow: hidden;
+            text-align: left;
+        }
+        .nc_name:hover{
+            color: #7F5B42;
+            text-decoration: underline;
+        }
+        .price_wrap{
+            text-align: left;
+        }
+        .goodsList_hide{
+            display: none;
+        }
     </style>
 
 <div class="head">
@@ -178,12 +255,46 @@
             <span>|</span>
             <a href="signup.html" id="quit">注册</a>
         </div>
+
+        <!------------- mini_cart --------------->
+
         <div class="cart_bar">
             <a href="/html/cart.html"><img src="../image/dapu_minicart.png" alt="">
                 <span class="cart_number">2</span>
-                <div class= "cart_shop">购物车里面暂时没有商品</div>
             </a>
+            <!------ 没有商品时 ------->
+            <div class="cart_none">购物车里面暂时没有商品</div>
+            <!---------- 有商品时 ----------------->
+            <div class="minicart_con">
+                <div class="cartInfoItems clearfix">
+                    <h4 class="micolor1">
+                        共 <span class="item_totalnumber micolor2">1</span>件商品 <br>
+                        金额总计 <span class="micolor2 totalprice" style="font-weight: bold">￥99</span>
+                    </h4>
+                   <div style="height: 28px;">
+                       <a href="/html/cart.html" class="go" style="background: url(/image/dapu_20160107124.jpg)">去购物车结算</a>
+                   </div>
+                </div>
+                <div class="clearfix goodsList_hide">
+                    <div class="mini_goodspic">
+                        <img src="/image/111.jpg" alt="">
+                    </div>
+                    <div class="goods_main">
+                        <a href="/html/product_1927.html" class="clearfix nc_name" >【质造】星球杯(规格：2杯2碟/对装)</a>
+                        <div class="price_wrap">
+                            <span style="float: left" class="micolor2 nc_price">￥99</span>
+                            <span style="float: left" > &nbsp;*&nbsp;</span>
+                            <span style="float: left ; color: #666;" class="nc_number">1</span>
+                            <span style="float: right">
+                                <a href="#" class="delcart" style="line-height: 17px;color: #367ec1">删除</a>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <a href="/html/cart.html" class="more">更多</a>
+            </div>
         </div>
+
         <div class="search_bar">
             <input type="text" class="search_key" placeholder="想要买什么？">
         </div>
@@ -447,16 +558,146 @@
             $.cookie.json=true;
             var newUser = $.cookie("newUser");
             console.log(newUser);
-                if ( newUser ) {
-                    $("#username").html(newUser.phone);
-                    $("#quit").html("退出").on("click" , function () {
-                        $("#username").html("登录");
-                        $("#quit").html("注册").attr("href" , "/html/index.html");
-                        $.removeCookie("newUser");
-                        return false;
+
+            var uname = "";
+            if( newUser ){ uname =newUser.phone }
+
+            var cartlists = ( newUser ) ? ( $.cookie(uname) || [] ) : ( $.cookie("unlogin") || [] ),
+                length = cartlists.length;
+
+
+            if( length === 0){
+                //没有选购商品
+                $(".cart_number").html("0");
+                $(".cart_bar").hover(function () {
+                    $(".cart_none").show();
+                },function () {
+                    $(".cart_none").hide();
+                })
+            }else {
+                //选购了商品
+                $(".cart_number").html(cartlists[length-1].totalnumber);
+                //显示商品的细节
+                //显示mini_cart
+                $(".cart_bar").hover(function () {
+                    $(".minicart_con").show().find(".item_totalnumber").html(cartlists[length-1].totalnumber).end()
+                        .find(".totalprice").html(cartlists[length-1].totalprice);
+                },function () {
+                    $(".minicart_con").hide();
+                });
+                if(length >= 3){
+                    //显示前三个商品
+                    for ( var i = 0 ; i < 3 ; i++){
+                        var _list = cartlists[i];
+                        $(".goodsList_hide").clone(true).data("list" , _list)
+                            .removeClass("goodsList_hide").addClass("goodsList")
+                            .appendTo($(".minicart_con"))
+                            .find(".mini_goodspic img").attr("src" , _list.imgSrc).end()
+                            .find(".nc_name").attr( "href" ,_list.url).html(_list.name+"(规格："+_list.size+")").end()
+                            .find(".nc_price").html("￥" + _list.price).end()
+                            .find(".nc_number").html(_list.number);
+                    }
+                    $(".more").show();
+
+                }else {
+                    $.each(cartlists,function () {
+                        $(".goodsList_hide").clone(true).data("list" , this)
+                            .removeClass("goodsList_hide").addClass("goodsList")
+                            .appendTo($(".minicart_con"))
+                            .find(".mini_goodspic img").attr("src" , this.imgSrc).end()
+                            .find(".nc_name").attr( "href" ,this.url).html(this.name+"(规格："+this.size+")")
+                            .find(".nc_price").html("￥" + this.price).end()
+                            .find(".nc_number").html(this.number);
                     });
-                    $("#quit").attr("href" , "/html/signup.html");
+                    $(".more").hide();
                 }
+            }
+
+
+            /*if ( newUser ) {
+                //用户已经登录
+                var uname = newUser.phone;
+                var cartlists = $.cookie(uname) || [],
+                    length = cartlists.length;
+
+                if( length === 0){
+                    //没有选购商品
+                    $(".cart_number").html("0");
+                    $(".cart_bar").hover(function () {
+                        $(".cart_none").show();
+                    },function () {
+                        $(".cart_none").hide();
+                    })
+                }else {
+                    //选购了商品
+                    $(".cart_number").html(cartlists[length-1].totalnumber);
+                    //显示商品的细节
+                    //显示mini_cart
+                    $(".cart_bar").hover(function () {
+                        $(".minicart_con").show().find(".item_totalnumber").html(cartlists[length-1].totalnumber).end()
+                            .find(".totalprice").html(cartlists[length-1].totalprice);
+                    },function () {
+                            $(".minicart_con").hide();
+                    });
+                    if(length >= 3){
+                        //显示前三个商品
+                        for ( var i = 0 ; i < 3 ; i++){
+                            var _list = cartlists[i];
+                            $(".goodsList_hide").clone(true).data("list" , _list)
+                                .removeClass("goodsList_hide").addClass("goodsList")
+                                .appendTo($(".minicart_con"))
+                                .find(".mini_goodspic img").attr("src" , _list.imgSrc).end()
+                                .find(".nc_name").attr( "href" ,_list.url).html(_list.name+"(规格："+_list.size+")").end()
+                                .find(".nc_price").html("￥" + _list.price).end()
+                                .find(".nc_number").html(_list.number);
+                        }
+                        $(".more").show();
+
+                    }else {
+                        $.each(cartlists,function () {
+                            $(".goodsList_hide").clone(true).data("list" , this)
+                                .removeClass("goodsList_hide").addClass("goodsList")
+                                .appendTo($(".minicart_con"))
+                                .find(".mini_goodspic img").attr("src" , this.imgSrc).end()
+                                .find(".nc_name").attr( "href" ,this.url).html(this.name+"(规格："+this.size+")")
+                                .find(".nc_price").html("￥" + this.price).end()
+                                .find(".nc_number").html(this.number);
+                        });
+                        $(".more").hide();
+
+                    }
+
+                }*/
+            if( newUser ){
+                $("#username").html(uname);
+                $("#quit").html("退出").on("click" , function () {
+                    $(".cart_number").html("0");
+                    $("#username").html("登录");
+                    $("#quit").html("注册").attr("href" , "/html/index.html");
+                    $.removeCookie("newUser");
+                    return false;
+                });
+                $("#quit").attr("href" , "/html/signup.html");
+            }
+
+                /*$("#username").html(uname);
+                $("#quit").html("退出").on("click" , function () {
+                    $(".cart_number").html("0");
+                    $("#username").html("登录");
+                    $("#quit").html("注册").attr("href" , "/html/index.html");
+                    $.removeCookie("newUser");
+                    return false;
+                });
+                $("#quit").attr("href" , "/html/signup.html");
+            */
+            /*else{
+                //用户未登录
+                var cartlists = $.cookie("unlogin") || [],
+                    length = cartlists.length;
+                console.log(cartlists);
+
+                $(".cart_number").html(cartlists[length-1].totalnumber);
+            }*/
         });
 
 

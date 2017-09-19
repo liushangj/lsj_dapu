@@ -7,17 +7,14 @@
     <link rel="stylesheet" href="../css/reset.css" type="text/css">
     <link rel="stylesheet" href="../css/right_banner.css" type="text/css">
     <link rel="stylesheet" href="../css/gallery-393.css" type="text/css">
-    <script src="../js/carousel.js"></script>
-    <script src="../lib/jquery/jquery-1.12-4.min.js"></script>
-    <script src="../lib/arttemplate/template-native.js"></script>
-    <script src="/lib/jquery-Plugins/jquery.cookie.js"></script>
-    <script src="../js/head.js"></script>
+    <script src="/lib/requirejs/require.js" data-main="/js/gallery_393.js"></script>
+
 </head>
 <body>
-<div class="right"> <list-itime id="right_bar"></list-itime> </div>
+<div id="right_banner">  </div>
 
 <div class="main">
-    <div class="top"> <list-itime id="header"></list-itime> </div>
+    <div id="header"> </div>
     <!-------------------------------- container --------------------------------->
     <div class="shop_main">
         <div class="header_f1">
@@ -181,7 +178,7 @@
                                         <a href="#" style="display: inline-block; padding: 5px 5px ">家居服</a>
                                 </div>
                             </div>
-                            </div>
+                    </div>
 
                             <!----------------------------------- 。。。。 --------------------------------------->
                     <div class="item" id="item_124">
@@ -238,19 +235,7 @@
                 </li>
                 <%  }  %>
             </script>
-            <script>
-                $(function () {
-                    $.getJSON("../mock/gallery_393.json", function (data) {
-                        var recent_list = template("recent_list", {_recent: data.recent_list});
-                        $(".items").append(recent_list);
-                    });
 
-                    //清除事件
-                    $(".clearAll").on("click",function () {
-                        $(".items").find("*").hide();
-                    })
-                })
-            </script>
 
             <!------------------------------------ bfd_list  ------------------------------------------------->
             <div class="bfd_list">
@@ -277,14 +262,7 @@
                 </li>
                 <%  }  %>
             </script>
-            <script>
-                $(function () {
-                    $.getJSON("../mock/gallery_393.json", function (data) {
-                        var bfd_list = template("bfd_list", {_bfd: data.bfd_list});
-                        $(".bfd_content").find("ul").append(bfd_list);
-                    });
-                })
-            </script>
+
         </div>
         <!--------------------------- main_con ---------------------------------->
         <div class="main_con">
@@ -296,11 +274,7 @@
                 </div>
                 <form action="" id="selector_form"></form>
             </div>
-            <script>
-                $(function () {
-                    $(".hd").find("h1").text($("#last_name").text());
-                })
-            </script>
+
             <!--------- 主要部分----------->
             <div class="filter">
                 <dl>
@@ -358,27 +332,12 @@
 
                 <%  }  %>
             </script>
-            <script>
-                $(function () {
-                    $.getJSON("../mock/gallery_393.json", function (data) {
-                        var products = template("prods_list", {_product: data.products_list});
-                        $("#products_list").append(products);
-                    });
-
-                })
-            </script>
         </div>
     </div>
 </div>
 
-    <div class="woshi_footer"> <list-itime id="footer"></list-itime> </div>
-<script>
-    $(function () {
+    <div id="footer"></div>
 
-        $(".item").find("div").hide();
-        $("#item_393").find("*").show();
-    })
-</script>
 
 </body>
 </html>

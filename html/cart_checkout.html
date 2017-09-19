@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="http://s.dapuimg.com/favicon.ico" type="image/x-icon">
+    <title>购物车_</title>
+    <link rel="stylesheet" href="/css/reset.css" type="text/css">
+    <link rel="stylesheet" href="/css/right_banner.css" type="text/css">
+    <link rel="stylesheet" href="/css/cart_checkout.css" type="text/css">
+    <script src="/lib/requirejs/require.js" data-main="/js/cart_checkout.js"></script>
+</head>
+<body>
+<div class="main">
+    <!----- header ------->
+    <div class="header clearfix" >
+        <div class="logo">
+            <a href="/html/index.html" target="_blank">
+                <img src="/image/logo2015.png" alt="大朴" width="200px" height="50px" border="0">
+            </a>
+        </div>
+        <ol class="processNav">
+            <li class="step1">1、我的购物车 <b class="extra"></b></li>
+            <li class="step2 on">2、填写核对订单信息<b class="extra" ></b></li>
+            <li class="step3">3、成功提交订单</li>
+        </ol>
+    </div>
+    <!-------------------------------------------------------------->
+    <!------- form表单 -------->
+    <form id="order_create">
+        <div class="orders_page">
+            <div class="f1_box border_2" id="addr_box">
+                <!------- 收货地址 --------->
+                <div class="new_order_f1_title">
+                    <span>收货人信息</span>
+                    <a href="javascript:void(0)" class="f1_update" id="receiver" style="display: none;">修改</a>
+                    <a href="javascript:void(0)" class="f1_update" id="cancel_receiver" style="display: none;">取消修改</a>
+                </div>
+                <div class="new_shrxx_con">
+                    <div id="addr_edit">
+                        <table width="100%" border="0" cellpadding="0" cellspacing="0" class="tableform" style="margin-left: 0">
+                            <tbody>
+                                <tr>
+                                    <th style="text-align: right"> <em class="font_red">*</em> 收货人姓名：</th>
+                                    <td colspan="2">
+                                        <input type="text" class="orders_input" size="15" id="name" maxlength="10">
+                                        <span  id="order_name_info">请输入姓名</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th style="text-align: right"> <em class="font_red">*</em> 收货人地区：</th>
+                                    <td colspan="2">
+                                        <span id="select_big_area">
+                                            <select name="" id="province">
+                                                <option value="_null_">请选择</option>
+                                            </select>
+                                            <span class="city" style="display: none">
+                                                &nbsp;-&nbsp;
+                                                <select id="city">
+                                                    <option value="_null_">请选择</option>
+                                                </select>
+                                            </span>
+                                            <span class="county" style="display: none">
+                                                &nbsp;-&nbsp;
+                                                <select id="county">
+                                                    <option value="_null_">请选择</option>
+                                                </select>
+                                            </span>
+                                            <span id="order_area_info">请输入收货地区</span>
+                                        </span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th style="text-align: right"> <em class="font_red">*</em> 收货人地址：</th>
+                                    <td>
+                                        <span id="select_area_info" class="font_gray" title="系统将拼接地区选择结果到收货地址">[地区]</span>
+                                        <input type="text" class="order_input" id="addr" size="50" maxlength="50">
+                                        <span id="order_small_area_info">请输入收货地址</span>
+                                        <p style="color: red">（为了更快的让您收到货物，请填写收货地址时尽量详细一些，比如xx路，xx街，xx小区等等）</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th style="text-align: right">邮编：</th>
+                                    <td>
+                                        <input type="text" class="order_input" size="15" id="zip" maxlength="6">
+                                        <span id="order_zip_info">请输入邮政编码</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th style="text-align: right"> <em class="font_red">*</em> 手机：</th>
+                                    <td colspan="2">
+                                        <input type="text" class="order_input" size="15" id="mobile" maxlength="11">
+                                        <span>
+                                            固定电话：
+                                            <input type="text" class="order_input" size="15" id="tel">
+                                            <span style="color: red">（手机和固定电话请至少填写一项）</span>
+                                            <span id="order_mobile_info">请输入电话号码</span>
+                                        </span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th style="text-align: right">送货时间：</th>
+                                    <td colspan="2">
+                                        <select name="delivery[day]" id="ceveing_day">
+                                            <option value="工作日、双休日与假日均可送货" selected="selected">工作日、双休日与假日均可送货</option>
+                                            <option value="只工作日送货(双休日、假日不用送)">只工作日送货(双休日、假日不用送)</option>
+                                            <option value="只双休日、假日送货(工作日不用送)">只双休日、假日送货(工作日不用送)</option>
+                                        </select>
+                                        <span id="sepcal_day">
+                                            <input type="text" class="order_input" style="width: 80px">
+                                        </span>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="btn_check_addr">确认收货人信息</div>
+                </div>
+                <!------- 保存后显示的信息 ----------->
+                <div class="hid_item" id="receiver_addr" style="display: none">
+                    <p>
+                        <label>收货人姓名：</label>
+                        <span id="name_span">123</span>
+                    </p>
+                    <p>
+                        <label>收货人地区：</label>
+                        <span id="area_span">四川省成都市武侯区</span>
+                    </p>
+                    <p>
+                        <label>收货人地址：</label>
+                        <span id="addr_span">什么街</span>
+                    </p>
+                    <p>
+                        <label>邮编：</label>
+                        <span id="zip_span">123456</span>
+                    </p>
+                    <p>
+                        <label>手机：</label>
+                        <span id="mobile_span">12354364984</span>
+                    </p>
+                    <p>
+                        <label>固定电话：</label>
+                        <span id="tel_span">00000000</span>
+                    </p>
+                    <p>
+                        <label>送货时间：</label>
+                        <span id="day_span">周末加班</span>
+                    </p>
+
+                </div>
+            </div>
+            <!-------------------------->
+            <!----- 支付及配送信息 ----->
+            <div class="f1_box" id="payment_box">
+                <input type="text" value="中国工商银行" id="bank_value">
+                <input type="text" id="pay_value" >
+                <div class="new_order_f1_title" id="new_peisog_title">
+                    <span>配送及支付方式</span>
+                    <a href="javascript:void(0)" class="f1_update" id="payment_edit_btn">修改</a>
+
+                </div>
+                <span id="order_pay_info" style="color: #f00; font-weight: 100;width: 500px;display: none;">由于您更改了收货人信息，请重新填写支付方式和配送方式！</span>
+                <div id="new_payment_con" >
+                    <p>
+                        <label >配送方式：</label>
+                        <span id="peisong_type">快递-网上支付</span>
+                    </p>
+                    <p>
+                        <label >付款方式：</label>
+                        <span id="peisong_value">中国工商银行</span>
+                    </p>
+                </div>
+            </div>
+            <!--------------------------->
+            <!------- 商品明细 ------->
+            <div class="f1_box">
+                <div class="new_order_f1_title">
+                    <span>商品清单</span>
+                    <a href="/html/cart.html" class="f1_upfate" style="width: 150px;display: block;float: left;"><<返回购物车</a>
+                </div>
+                <div id="checkcart" class="shoppingCart pList">
+                    <table class="product_tab">
+                        <tbody>
+                            <tr>
+                                <th width="40%">商品信息</th>
+                                <th width="10%">商品单价</th>
+                                <th width="15%">商品数量</th>
+                                <th width="10%">小计</th>
+                            </tr>
+                            <tr class="g_item">
+                                <td>
+                                    <div class="g_pic">
+                                        <a href="/html/product_1927.html" target="_blank">
+                                            <img src="/image/a1.jpg" alt="【质造】星球杯" width="80" class="g_img" height="80">
+                                        </a>
+                                    </div>
+                                    <div class="g_info">
+                                        <a href="/html/product_1927.html" target="_blank">【质造】星球杯</a>
+                                        <p class="spec_info">规格：2杯2碟/对装</p>
+                                    </div>
+                                </td>
+                                <td class="g_price">
+                                    <span>￥99</span>
+                                </td>
+                                <td class="g_number">3</td>
+                                <td class="g_total" >￥297</td>
+                            </tr>
+                            <tr class="g_item">
+                                <td>
+                                    <div class="g_pic">
+                                        <a href="/html/product_1927.html" target="_blank">
+                                            <img src="/image/a1.jpg" alt="【质造】星球杯" width="80" class="g_img" height="80">
+                                        </a>
+                                    </div>
+                                    <div class="g_info">
+                                        <a href="/html/product_1927.html" target="_blank">【质造】星球杯</a>
+                                        <p class="spec_info">规格：2杯2碟/对装</p>
+                                    </div>
+                                </td>
+                                <td class="g_price">
+                                    <span>￥99</span>
+                                </td>
+                                <td class="g_number">3</td>
+                                <td class="g_total" >￥297</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <!------------------------------------>
+            <!------ 结算信息 --------->
+            <div class="f1_box">
+                <div class="new_order_f1_title">
+                    <span>结算信息</span>
+                </div>
+                <div class="acounts clearfix">
+                    <div class="acounts_left" style="width: 70%;float: left">
+                        <!------ 优惠券 -------->
+                        <div class="clearfix">
+                            <input type="checkbox" checked id="coupon_toggle" style="float: left">
+                            <label for="coupon_toggle" class="checkbox_title" style="cursor: pointer">使用优惠券</label>
+                        </div>
+                        <div class="add_coupon_form" id="add_coupon_form">
+                            <table cellspacing="0" cellpadding="0" border="0" width="100%" class="tableform">
+                                <tbody>
+                                    <tr>
+                                        <td class="coupon_list">
+                                            <label style="text-align: left">账户优惠券：</label>
+                                            <select id="check_member_coupon">
+                                                <option value="">-- 选择优惠券 --</option>
+                                                <option value="B17051535CE03A0000320">订单满99减10元（新用户注册）</option>
+                                            </select>
+                                        </td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="cart_coupon_add" style="height: 32px;line-height: 32px;">
+                                            <label for="coupon_number" style="text-align: left">输入优惠券：</label>
+                                            <input type="text" class="order_input" id="coupon_number" size="20" value="请输入优惠券号码">
+                                        </td>
+                                        <td>
+                                            <span id="coupon_use" class="btn_min">使用</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="2">
+                                            <span style="color: #b10000">温馨提示：大朴网拒绝套券购物行为，一经发现会取消订单。如：同一客户多次使用同一类券购买相同品类商品。</span>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <!------- 礼品券 -------->
+                        <div id="gift_card">
+                            <div style="height: 16px;color: #000;font-size: 12px;" class="clearfix">
+                                <input type="checkbox" style="float: left" checked id="giftcard_toggle">支持礼品卡支付
+                            </div>
+                            <div style="border:1px #ccc solid; margin: 6px 02px 2px 2px ;padding: 18px 0 10px 0">
+                                <table id="gift_card_add" class="tableform" border="0" width="100%" cellpadding="0" cellspacing="0" >
+                                    <tbody>
+                                    <tr>
+                                        <td>
+                                            <label for="giftcard_code">礼品卡号码：</label>
+                                            <input type="text" class="order_input" id="giftcard_code" size="25" value="请输入礼品卡号码">
+                                        </td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <label for="">礼品卡密码：</label>
+                                            <input type="password" class="order_input" id="giftcard_pwd" size="25" value="请输入礼品卡密钥">
+                                        </td>
+                                        <td>
+                                            <span id="giftcard_use" class="btn_min">使用</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="2">
+                                            <span style="padding-left: 5px;color: #ff0000">支持使用多张礼品卡，成功使用一张礼品卡后可以再次输入第二张礼品号及密码，依此类推。</span>
+                                        </td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <!---------- 备注 ------------>
+                            <p style="margin-top: 10px;">
+                                <label for="" class="checkbox_title" style="text-align: left">订单备注：</label>
+                                <input type="text" maxlength="50">
+                            </p>
+
+                        </div>
+                    </div>
+                    <!------------------------->
+                    <!-------支付详情-------->
+                    <div class="acounts_right" style="background: #ecf0f1;width: 30%;float: left;min-height: 424px;margin-bottom: 12px;">
+                        <div id="checkout_saled" style="padding: 10px;text-align: right">
+                            <div style="background: #2980b9;color: #fff">已享受促销优惠：</div>
+                            <ul>
+                                <li class="clearfix">
+                                    <span class="w300" style="width: 100%;color: red">购物满88元包邮 </span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="amountinfo">
+                            <div class="jiesuan_solution">
+                                <p>
+                                    <label for="">商品金额：</label>￥2338
+                                </p>
+                                <p>
+                                    <label for="">免配送费：</label>-￥0
+                                </p>
+                            </div>
+                            <div class="total_amount">
+                                <p class="p1" style="font-size: 18px; color: #f00; ">
+                                    应付金额：￥ <span id="due_amount">2338</span>元
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="f1_box no_border">
+                <button type="button" class="order_present" style="cursor: pointer;" disabled title="请稍等，正在加载数据...">提交订单</button>
+            </div>
+        </div>
+    </form>
+
+
+    <!------- footer -------->
+    <div id="footer"></div>
+</div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

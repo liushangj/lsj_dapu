@@ -1,0 +1,322 @@
+a:hover{
+    color:#7F5B42;
+    text-decoration: underline;
+}
+/********************** header **************************/
+.header{
+    width: 980px;
+    margin: 0 auto 10px;
+    .logo{
+        float: left;
+        width: 260px;
+        height: 55px;
+        margin: 20px 10px 0 8px;
+    }
+    .processNav{
+        float: left;
+        margin: 35px 0 0 ;
+        background: #fff;
+        color: #404040;
+        font-weight: 700;
+        li{
+            float: left;
+            position: relative;
+            height: 26px;
+            background: #eee;
+            font-size: 14px;
+            line-height: 26px;
+            text-align: center;
+        }
+        .extra{
+            position: absolute;
+            right: -15px;
+            top: 0;
+            width: 18px;
+            height: 26px;
+            background: url("/image/scbgv.png") no-repeat 0 0;
+        }
+        .on{
+            background: #615146;
+            color: #fff;
+            .extra{
+                background-position: 0 -30px;
+            }
+        }
+        .step1{
+            width: 205px;
+            z-index: 4;
+        }
+        .step2{
+            width: 243px;
+            z-index: 3;
+        }
+        .step3{
+            width: 245px;
+            z-index: 2;
+        }
+    }
+}
+/**************************** form  *******************************/
+/****** address ********/
+
+.orders_page{
+    width: 1000px;
+    margin: 0 auto;
+}
+.f1_box{
+    width: 976px;
+    padding: 10px;
+    margin: 20px 0 20px 0;
+    font-size: 13px;
+    border: 2px solid #efefef;
+    label{
+        width: 100px;
+        text-align: right;
+        display: block;
+        float: left;
+
+    }
+}
+.border_2{
+    border: 2px solid #615146;
+}
+.f1_update{
+    font-size: 12px;
+    color: #95a5a6;
+}
+.new_order_f1_title{
+    width: 100%;
+    height: 32px;
+    line-height: 32px;
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #efefef;
+    span{
+        width: 150px;
+        display: block;
+        float: left;
+    }
+}
+.new_shrxx_con{
+    div{
+      line-height:30px;
+    }
+}
+
+.font_red{
+    color: red;
+}
+.font_gray{
+    color: #666;
+}
+em{
+    padding: 0 3px;
+    font-weight: bold;
+}
+input {
+    border: 1px solid #bdc3c7;
+    color: #34495e;
+    font-size: 14px;
+    padding: 2px 2px;
+    height: 20px;
+    &:hover{
+        border-color: #f00;
+    }
+}
+select{
+    height: 26px;
+    margin: 0;
+    border-color: rgb(169,169,169);
+}
+table{
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+.orders_input{
+    width: 270px;
+    line-height: 23px;
+}
+.tableform{
+    tr{
+        margin: 2px 0;
+    }
+    th{
+        width: 100px;
+        color: #333;
+        padding: 3px 0 3px 3px ;
+        font-style: normal;
+        font-weight: 500;
+    }
+    td{
+        padding: 3px;
+    }
+}
+#order_name_info{
+    padding: 3px 5px 3px 15px;
+    color: #e10100;
+    background: url("/image/new_tishi_icon.jpg") no-repeat 6px 50%;
+    display: none;
+}
+#order_area_info{
+    @extend #order_name_info;
+}
+#order_small_area_info{
+    @extend #order_name_info;
+}
+#order_mobile_info{
+    @extend #order_name_info;
+}
+.btn_check_addr{
+    height: 30px;
+    cursor: pointer;
+    background: #3498db;
+    width: 150px;
+    text-align: center;
+    margin: 16px;
+    color: #fff;
+}
+.unfold{
+    margin: 10px 0 0 20px;
+
+}
+/**************** checkCart ***************/
+.shoppingCart{
+    margin-bottom: 10px;
+}
+.product_tab{
+    width: 100%;
+    tr{
+        border: 5px solid #fff;
+    }
+    th{
+        font-weight: bold;
+        text-align: left;
+    }
+    .g_pic{
+        float: left;
+    }
+    .g_info{
+        float: left;
+        padding-left: 10px;
+    }
+}
+/******************* acounts ***********************/
+.acounts{
+    padding-top: 10px;
+    position: relative;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+.checkbox_title{
+    color: #357ec0;
+    font-size: 16px;
+    text-decoration: none;
+}
+.add_coupon_form{
+    width: 620px;
+    border: 1px solid #bdc3c7;
+    padding: 10px;
+}
+.btn_min{
+    cursor: pointer;
+    background-color: #3498db;
+    height: 26px;
+    width: 80px;
+    text-align: center;
+    color: #fff;
+    mso-line-height-alt: 26px;
+    display: block;
+    margin: 0 0 ;
+}
+#gift_card{
+    width: 642px;
+    margin-top: 17px;
+    tr{
+        height: 47px;
+    }
+}
+.amountinfo{
+    padding: 10px;
+    text-align: right;
+    margin-left: 10px;
+}
+.total_amount{
+    text-align: right;
+    border-top: 1px solid #6b6b6b;;
+    margin-top: 10px;
+    .p1{
+        line-height: 40px;
+    }
+}
+.order_present{
+    background-color: #3498db;
+    height: 50px;
+    width: 150px;
+    text-align: center;
+    color: #fff;
+    font-size: 20px;
+    line-height: 50px;
+    border: none;
+    float: right;
+}
+.no_border{
+    border: none;
+    overflow: hidden;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

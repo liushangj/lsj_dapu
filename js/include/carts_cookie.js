@@ -75,23 +75,7 @@ require( ["config"] , function () {
                 }
             });
 
-            /*************** mini-cart ******************/
-            $(".tocart input").click(function () {
-                if($(".right_ul").find(".check_size").length === 0){
-                    return false;
-                }else {
-                    $(".mini_cart").show();
-                    return false;
-                }
 
-            });
-            $(".mini_cart .close").click(function () {
-                $(".mini_cart").hide();
-            });
-            $(".rebuy").click(function () {
-                $(".mini_cart").hide();
-                return false;
-            });
 
             /************** 加减数量 ************/
             $(".numinput").on( "click" , ".minus,.add" , function () {
@@ -127,7 +111,8 @@ require( ["config"] , function () {
                         name : $(".goods_name").html(),
                         size : $(sizespan).find("span").text(),
                         number : _number,
-                        sub : $(".goods_price_box em").text().slice(1)*$("#pro_count").val()
+                        sub : $(".goods_price_box em").text().slice(1)*$("#pro_count").val(),
+                        url : window.location.href
                 };
                 var uname = $("#username").html();
                 var _product =[];
@@ -145,15 +130,25 @@ require( ["config"] , function () {
                         _product[index].sub = Number( product.sub ) + Number( _product[index].sub);
 
                     }
+
+
+                    var _totalnumber = 0 ,
+                        _totalprice = 0,
+                        length = _product.length;
+                    for ( var i = 0 ; i<length ; i++){
+                        _totalnumber += Number(_product[i].number);
+                        _totalprice += Number( _product[i].sub);
+
+                    }
+                    _product[length-1].kind = _product.length;
+                    _product[length-1].totalprice = _totalprice;
+                    _product[length-1].totalnumber = _totalnumber;
+
                     //保存到cookie中
                     $.cookie("unlogin" , _product , { path:"/"});
-
-                    console.log($.cookie("unlogin"));
                 }else {
                     //已经登录
-                    console.log(typeof uname);
                     _product = $.cookie(uname) || [];
-                    console.log(_product);
                     //判断商品是否有重复的
                     let index = indexOf( product.id , "id" , _product);
                     if( index === -1){
@@ -164,12 +159,49 @@ require( ["config"] , function () {
                         _product[index].number = Number(_number) + Number( _product[index].number) ;
                         _product[index].sub = Number( product.sub ) + Number( _product[index].sub);
                     }
+
+                    var _totalnumber = 0 ,
+                        _totalprice = 0,
+                        length = _product.length;
+                    for ( var i = 0 ; i<length ; i++){
+                        _totalnumber += Number(_product[i].number);
+                        _totalprice += Number( _product[i].sub);
+                    }
+                    _product[length-1].kind = _product.length;
+                    _product[length-1].totalprice = _totalprice;
+                    _product[length-1].totalnumber = _totalnumber;
                     //保存到cookie中
                     $.cookie( uname , _product , {expires:1, path:"/"});
-                    console.log($.cookie(uname));
                 }
             });
 
+            /*************** mini-cart ******************/
+            $(".tocart input").click(function () {
+                if($(".right_ul").find(".check_size").length === 0){
+                    return false;
+                }else {
+
+                    var _uname = $("#username").html();
+                    var _product = _uname === "登录" ? $.cookie("unlogin") : $.cookie(_uname),
+                        length = _product.length;
+
+                    $(".mini_cart").show().find(".type").html(_product[length-1].kind).end()
+                                            .find(".number").html(_product[length-1].totalnumber).end()
+                                            .find(".sub").html(_product[length-1].totalprice);
+
+                    return false;
+                }
+            });
+            $(".mini_cart .close").click(function () {
+                $(".mini_cart").hide();
+            });
+            $(".rebuy").click(function () {
+                $(".mini_cart").hide();
+                return false;
+            });
+            $(".topay").click(function () {
+                $(this).attr("href","/html/cart.html");
+            });
 
         });
     });
