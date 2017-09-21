@@ -2,9 +2,14 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/../../../9-06/.idea/9-06.iml" filepath="$PROJECT_DIR$/../../../9-06/.idea/9-06.iml" />
+      <module fileurl="file://C:\Users\9-06\.idea\9-06.iml" filepath="C:\Users\9-06\.idea\9-06.iml" />
+      <module fileurl="file://D:/WS/WorkSpace/study/9mouth/9-14/.idea/9-14.iml" filepath="D:/WS/WorkSpace/study/9mouth/9-14/.idea/9-14.iml" />
+      <module fileurl="file://D:/WS/WorkSpace/study/9mouth/9-18/.idea/9-18.iml" filepath="D:/WS/WorkSpace/study/9mouth/9-18/.idea/9-18.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/PCproduct.iml" filepath="$PROJECT_DIR$/.idea/PCproduct.iml" />
-      <module fileurl="file://$PROJECT_DIR$/../../../day31/.idea/day31.iml" filepath="$PROJECT_DIR$/../../../day31/.idea/day31.iml" />
+      <module fileurl="file://E:/tools/jq插件/Swiper-4/.idea/Swiper-4.iml" filepath="E:/tools/jq插件/Swiper-4/.idea/Swiper-4.iml" />
+      <module fileurl="file://D:/WS/WorkSpace/study/8月/2017-08-30/day23/.idea/day23.iml" filepath="D:/WS/WorkSpace/study/8月/2017-08-30/day23/.idea/day23.iml" />
+      <module fileurl="file://C:\Users\day31\.idea\day31.iml" filepath="C:\Users\day31\.idea\day31.iml" />
+      <module fileurl="file://E:/wamp5_1.7.4_20140611/Wamp/wamp/www/.idea/www.iml" filepath="E:/wamp5_1.7.4_20140611/Wamp/wamp/www/.idea/www.iml" />
     </modules>
   </component>
 </project>

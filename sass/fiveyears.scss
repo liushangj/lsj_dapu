@@ -1,0 +1,79 @@
+.header{
+    width: 980px;
+    margin: 0 auto 10px;
+    .logo{
+      float: left;
+      width: 260px;
+      height: 55px;
+      margin: 20px 10px 0 8px;
+    }
+}
+a{
+    text-decoration: none;
+}
+/*******************************************/
+/********* container ***********/
+img{
+    border: 0;
+    width: 100%;
+}
+.container{
+    margin: 0 auto 100px;
+    padding: 0 15px;
+
+}
+.row{
+    margin: 0 -15px;
+}
+.youlike{
+    padding: 10px 0;
+    .p_img{
+        width: 100%;
+        border-radius: 5px;
+    }
+    .p_name{
+        width: 100%;
+        text-align: center;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+        color: #222;
+        margin: 0 0;
+        line-height: 20px;
+        margin-top: 5px;
+        font-size: 14px;
+    }
+    .p_price{
+        width: 100%;
+        text-align: center;
+        color: rgb(205,80,114);
+        line-height: 20px;
+        font-size: 14px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

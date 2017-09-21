@@ -7,6 +7,24 @@ require(["config"],function () {
         $(function () {
 
 
+           /* $("#login").click(function () {
+                console.log(this);
+                var _id = $("#uname");
+                var _password = $("#psd").val();
+                //ajax 发送请求
+                $.post(
+                    "http://localhost/login.php",
+                    { id:_id , password : _password},
+                    function (data) {
+                        if(data.status == 1){
+                            //用户存在,重新输入用户名
+                            console.log("登录成功");
+                            $("#error_mobile").html("此手机号已经注册，请重新输入或直接登录");
+                        }
+                    }
+                );
+            });*/
+
            /* console.log(event.keyCode);
             if( event.keyCode === 13){
                 check();
@@ -73,11 +91,15 @@ require(["config"],function () {
                         location="http://127.0.0.1:8080/html/index.html"
                     }
                 }
-            })
+            });
+
+
+
+
 
         });
 
-    })
+    });
 });
 
 

@@ -251,9 +251,9 @@
     </div>
     <div class="right_bar">
         <div class="login_bar">
-            <a href="login.html" id="username">登录</a>
+            <a href="/html/login.html" id="username">登录</a>
             <span>|</span>
-            <a href="signup.html" id="quit">注册</a>
+            <a href="/html/signup.html" id="quit">注册</a>
         </div>
 
         <!------------- mini_cart --------------->
@@ -339,8 +339,8 @@
             </div>
         </li>
         <li class="nav_one_on">
-            <a href="woshi.html"><span>卧室用品</span></a>
-            <div class="nav_table">
+            <a href="/html/woshi.html"><span>卧室用品</span></a>
+            <div class="nav_table" style="width: 570px;">
                 <ul class="nav_two">
                     <li><a href="#">床品件套</a></li>
                     <li><a href="#">被子枕头</a></li>
@@ -554,154 +554,6 @@
 </div>
 
     <script>
-        $(function () {
-            $.cookie.json=true;
-            var newUser = $.cookie("newUser");
-            console.log(newUser);
-
-            var uname = "";
-            if( newUser ){ uname =newUser.phone }
-
-            var cartlists = ( newUser ) ? ( $.cookie(uname) || [] ) : ( $.cookie("unlogin") || [] ),
-                length = cartlists.length;
-
-
-            if( length === 0){
-                //没有选购商品
-                $(".cart_number").html("0");
-                $(".cart_bar").hover(function () {
-                    $(".cart_none").show();
-                },function () {
-                    $(".cart_none").hide();
-                })
-            }else {
-                //选购了商品
-                $(".cart_number").html(cartlists[length-1].totalnumber);
-                //显示商品的细节
-                //显示mini_cart
-                $(".cart_bar").hover(function () {
-                    $(".minicart_con").show().find(".item_totalnumber").html(cartlists[length-1].totalnumber).end()
-                        .find(".totalprice").html(cartlists[length-1].totalprice);
-                },function () {
-                    $(".minicart_con").hide();
-                });
-                if(length >= 3){
-                    //显示前三个商品
-                    for ( var i = 0 ; i < 3 ; i++){
-                        var _list = cartlists[i];
-                        $(".goodsList_hide").clone(true).data("list" , _list)
-                            .removeClass("goodsList_hide").addClass("goodsList")
-                            .appendTo($(".minicart_con"))
-                            .find(".mini_goodspic img").attr("src" , _list.imgSrc).end()
-                            .find(".nc_name").attr( "href" ,_list.url).html(_list.name+"(规格："+_list.size+")").end()
-                            .find(".nc_price").html("￥" + _list.price).end()
-                            .find(".nc_number").html(_list.number);
-                    }
-                    $(".more").show();
-
-                }else {
-                    $.each(cartlists,function () {
-                        $(".goodsList_hide").clone(true).data("list" , this)
-                            .removeClass("goodsList_hide").addClass("goodsList")
-                            .appendTo($(".minicart_con"))
-                            .find(".mini_goodspic img").attr("src" , this.imgSrc).end()
-                            .find(".nc_name").attr( "href" ,this.url).html(this.name+"(规格："+this.size+")")
-                            .find(".nc_price").html("￥" + this.price).end()
-                            .find(".nc_number").html(this.number);
-                    });
-                    $(".more").hide();
-                }
-            }
-
-
-            /*if ( newUser ) {
-                //用户已经登录
-                var uname = newUser.phone;
-                var cartlists = $.cookie(uname) || [],
-                    length = cartlists.length;
-
-                if( length === 0){
-                    //没有选购商品
-                    $(".cart_number").html("0");
-                    $(".cart_bar").hover(function () {
-                        $(".cart_none").show();
-                    },function () {
-                        $(".cart_none").hide();
-                    })
-                }else {
-                    //选购了商品
-                    $(".cart_number").html(cartlists[length-1].totalnumber);
-                    //显示商品的细节
-                    //显示mini_cart
-                    $(".cart_bar").hover(function () {
-                        $(".minicart_con").show().find(".item_totalnumber").html(cartlists[length-1].totalnumber).end()
-                            .find(".totalprice").html(cartlists[length-1].totalprice);
-                    },function () {
-                            $(".minicart_con").hide();
-                    });
-                    if(length >= 3){
-                        //显示前三个商品
-                        for ( var i = 0 ; i < 3 ; i++){
-                            var _list = cartlists[i];
-                            $(".goodsList_hide").clone(true).data("list" , _list)
-                                .removeClass("goodsList_hide").addClass("goodsList")
-                                .appendTo($(".minicart_con"))
-                                .find(".mini_goodspic img").attr("src" , _list.imgSrc).end()
-                                .find(".nc_name").attr( "href" ,_list.url).html(_list.name+"(规格："+_list.size+")").end()
-                                .find(".nc_price").html("￥" + _list.price).end()
-                                .find(".nc_number").html(_list.number);
-                        }
-                        $(".more").show();
-
-                    }else {
-                        $.each(cartlists,function () {
-                            $(".goodsList_hide").clone(true).data("list" , this)
-                                .removeClass("goodsList_hide").addClass("goodsList")
-                                .appendTo($(".minicart_con"))
-                                .find(".mini_goodspic img").attr("src" , this.imgSrc).end()
-                                .find(".nc_name").attr( "href" ,this.url).html(this.name+"(规格："+this.size+")")
-                                .find(".nc_price").html("￥" + this.price).end()
-                                .find(".nc_number").html(this.number);
-                        });
-                        $(".more").hide();
-
-                    }
-
-                }*/
-            if( newUser ){
-                $("#username").html(uname);
-                $("#quit").html("退出").on("click" , function () {
-                    $(".cart_number").html("0");
-                    $("#username").html("登录");
-                    $("#quit").html("注册").attr("href" , "/html/index.html");
-                    $.removeCookie("newUser");
-                    return false;
-                });
-                $("#quit").attr("href" , "/html/signup.html");
-            }
-
-                /*$("#username").html(uname);
-                $("#quit").html("退出").on("click" , function () {
-                    $(".cart_number").html("0");
-                    $("#username").html("登录");
-                    $("#quit").html("注册").attr("href" , "/html/index.html");
-                    $.removeCookie("newUser");
-                    return false;
-                });
-                $("#quit").attr("href" , "/html/signup.html");
-            */
-            /*else{
-                //用户未登录
-                var cartlists = $.cookie("unlogin") || [],
-                    length = cartlists.length;
-                console.log(cartlists);
-
-                $(".cart_number").html(cartlists[length-1].totalnumber);
-            }*/
-        });
-
-
-        //验证是否存在
         function indexOf(id,check,array) {
             for( var i =0; i<array.length;i++){
                 if ( array[i][check] === id ){
@@ -710,7 +562,6 @@
             }
             return -1;
         }
-
     </script>
 
 

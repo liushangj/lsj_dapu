@@ -1,0 +1,120 @@
+<style>
+    .member-navbar{
+        width: 1105px;
+        margin: 0 auto;
+    }
+    .send_msg{
+        float: left;
+        margin-top: 5px;
+    }
+    .form-control{
+        float: left;
+        margin-top: 5px;padding-left: 50px;
+    }
+    #todocomment img{
+        position: absolute;
+        left: 23px;
+        top: 14px;
+
+    }
+    #praiseclick{
+        transform: scale(1) ;
+        transition: all 1s linear;
+    }
+    #praiseclick:hover{
+        transform: scale(1.2) ;
+        transition: all 1s linear;
+    }
+
+    #todocomment span{
+        position: absolute;
+        left: 50px;
+        top:11px ;
+    }
+    .comment_item_hide{
+        display: none;
+    }
+</style>
+
+<div class="row" style="border-top: 5px solid rgb(240,240,240)" id="comment">
+    <div class="col-xs-12" style="margin-top: 20px;margin-bottom: 10px;">
+        <img src="/image/chat.png" alt="" style="width: 2.5em;margin-top: -6px;padding-right: 2px;padding-left: 2px;">
+        <span style="font-size: 1.5em">全部评论</span>
+        <span style="padding-left: 10px;font-size: 1em" class="comm_num">10</span>
+        <div style="border-bottom: 15px solid rgb(240,240,240);width: 11em;position: absolute;top: 20px;z-index: -9999;"></div>
+    </div>
+
+    <!---------------->
+    <div class="col-xs-12 comment_item_hide" style="margin-top: 10px;">
+        <div class="col-xs-3" style="float: left;width: 14%;text-align: right;padding-right: 5px;padding-left: 0;">
+            <img src="/image/0.jpg" alt="童童妈" class="headimg" style="width: 30px;height: 30px;border-radius: 50%">
+        </div>
+        <div class="col-xs-9" style="float: right;width: 86%;font-size: 16px;padding-left: 0;padding-right: 5px;">
+            <div style="margin-top: 5px;margin-left: 5px;">
+                <div style="text-align: left;font-weight: bold" class="item_name">童童妈</div>
+                <div style="text-align: right;margin-top: -18px;color: #ccc;font-size: 12px;" class="item_days">20天前</div>
+            </div>
+            <div style="margin-top: 5px;margin-left: 5px;" class="item_wd">之前我妹买的大朴件套被我切过来之后，就开启了在这买买买的模式......</div>
+        </div>
+        <div class="col-xs-12" style="padding-top: 10px;border-bottom: 1px solid #f0f0f0"></div>
+    </div>
+</div>
+<!----------- 发表评论 ------------->
+<nav class="navbar navbar-default navbar-fixed-bottom member-navbar" style="height: 50px;border: none;background: #fff;">
+    <div class="row" style="text-align: center;border-top:5px solid rgb(240, 240, 240);">
+        <div class="col-xs-7" style="padding-left: 10px;padding-right: 5px;">
+            <div class="col-xs-12" id="todocomment" style="position: relative">
+                <img src="/image/20170221000_commented.png" alt="" style="width: 20px;margin-left: 5px;">
+                <span style="margin-left: 5px;margin-right: 5px;">|</span>
+                <input type="text" class="form-control" placeholder="我有话要说" id="wd">
+            </div>
+        </div>
+        <div class="send_msg btn btn-info">发送</div>
+        <div class="col-xs-5" style="padding-left: 5px;padding-right: 10px;width: 34.6%">
+            <div class="col-xs-6" style="padding-left: 0 ; padding-right: 0; text-align: right">
+                <img src="/image/20170221000_zan.png" alt="" id="praiseclick" style="width: 24px;margin-top: 15px;">
+                <span id="parisecount">0</span>
+            </div>
+            <div class="col-xs-6" style="padding-left: 0;padding-right: 0;text-align: center">
+                <a href="#comment" style="text-decoration: none" class="to_see_comm">
+                    <img src="/image/cc.png" alt="" style="width: 24px;padding-top: 15px;">
+                </a>
+                <span>10</span>
+            </div>
+        </div>
+    </div>
+</nav>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

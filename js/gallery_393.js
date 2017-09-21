@@ -6,7 +6,7 @@ require(["config"],function () {
         $(function () {
 
             /**********************  recent-item   ***********************/
-            $.getJSON("../mock/gallery_393.json", function (data) {
+            $.getJSON("/mock/gallery_393.json", function (data) {
                 var recent_list = template("recent_list", {_recent: data.recent_list});
                 $(".items").append(recent_list);
             });
@@ -17,8 +17,9 @@ require(["config"],function () {
             });
 
 
+
             /**********************  bfd_list  ***********************/
-            $.getJSON("../mock/gallery_393.json", function (data) {
+            $.getJSON("/mock/gallery_393.json", function (data) {
                 var bfd_list = template("bfd_list", {_bfd: data.bfd_list});
                 $(".bfd_content").find("ul").append(bfd_list);
             });
@@ -28,7 +29,7 @@ require(["config"],function () {
             $(".hd").find("h1").text($("#last_name").text());
 
             /******************  products *********************/
-            $.getJSON("../mock/gallery_393.json", function (data) {
+            $.getJSON("/mock/gallery_393.json", function (data) {
                 var products = template("prods_list", {_product: data.products_list});
                 $("#products_list").append(products);
             });

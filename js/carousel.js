@@ -180,4 +180,4 @@ Carousel.prototype = {
 	out : function(){
 		this.timer = setInterval(this.move.bind(this), 3000);
 	}
-}
+};

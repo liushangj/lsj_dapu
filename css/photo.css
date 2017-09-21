@@ -1,0 +1,19 @@
+html, body { position: relative; height: 100%; }
+
+.photo_title { height: 34px; line-height: 30px; background: url("/image/photo-title-bj.gif") repeat-x; font-size: 14px; padding: 0 20px; margin: 0; font-weight: bold; }
+
+.photo_cont { width: 700px; height: 700px; }
+
+.swiper-container { width: 648px; height: 648px; }
+
+.swiper-slide { background-size: cover; background-position: center; }
+
+.gallery-top { width: 648px; height: 648px; }
+
+.gallery-thumbs { height: 20%; box-sizing: border-box; padding: 10px 0; }
+
+.gallery-thumbs .swiper-slide { width: 25%; height: 100%; opacity: 0.4; }
+
+.gallery-thumbs .swiper-slide-active { opacity: 1; }
+
+/*# sourceMappingURL=photo.css.map */

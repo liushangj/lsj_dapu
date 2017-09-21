@@ -1,0 +1,70 @@
+{
+  "bfd_list" : [
+    { "imgsrc" : "/image/w1.jpg" , "name" : "240根纯棉缎纹纯色四件套" , "price" : "369"},
+    { "imgsrc" : "/image/w2.jpg" , "name" : "静眠天然乳胶枕（波浪款）" , "price" : "399"},
+    { "imgsrc" : "/image/w3.jpg" , "name" : "水洗棉家居保暖防滑拖鞋" , "price" : "59"}
+  ],
+  "products_list" : [
+    {"imgSrc_big" : "/image/w4.jpg" , "imgSrc_small" : "/image/w4.jpg" , "name" : "精梳纯棉缎纹磨毛纯色四件套" , "price" : "569","href" : "product_1927.html"},
+    {"imgSrc_big" : "/image/w5.jpg" , "imgSrc_small" : "/image/w5.jpg" , "name" : "【预售】精梳纯棉缎纹婚庆印花六件套【9月26日发货】" , "price" : "999","href" : "product_1927.html"},
+    {"imgSrc_big" : "/image/w6.jpg" , "imgSrc_small" : "/image/w6.jpg" , "name" : "【预售】精梳纯棉缎纹婚庆绣花六件套【9月26号发货】" , "price" : "2199","href" : "product_1927.html"},
+    {"imgSrc_big" : "/image/w7.jpg" , "imgSrc_small" : "/image/w7.jpg" , "name" : "全工艺精梳纯棉600根绣花四件套" , "price" : "1899","href" : "product_1927.html"},
+    {"imgSrc_big" : "/image/w8.jpg" , "imgSrc_small" : "/image/w8.jpg" , "name" : "天然新疆棉针织印花四件套" , "price" : "769","href" : "product_1927.html"},
+    {"imgSrc_big" : "/image/w9.jpg" , "imgSrc_small" : "/image/w9.jpg" , "name" : "天然新疆棉针织条纹件套" , "price" : "569","href" : "product_1927.html"},
+    {"imgSrc_big" : "/image/w10.jpg" , "imgSrc_small" : "/image/w10.jpg" , "name" : "天然新疆棉针织纯色件套" , "price" : "569","href" : "product_1927.html"},
+    {"imgSrc_big" : "/image/w11.jpg" , "imgSrc_small" : "/image/w11.jpg" , "name" : "240根纯棉缎纹纯色四件套" , "price" : "299","href" : "product_1927.html"},
+    {"imgSrc_big" : "/image/w12.jpg" , "imgSrc_small" : "/image/w12.jpg" , "name" : "全工艺精梳纯棉600根纯色四件套" , "price" : "1899","href" : "product_1927.html"},
+    {"imgSrc_big" : "/image/w13.jpg" , "imgSrc_small" : "/image/w13.jpg" , "name" : "老粗布凉席三件套" , "price" : "699","href" : "product_1927.html"},
+    {"imgSrc_big" : "/image/w14.jpg" , "imgSrc_small" : "/image/w14.jpg" , "name" : "精梳纯棉缎纹绣花四件套-相惜" , "price" : "699","href" : "product_1927.html"},
+    {"imgSrc_big" : "/image/w15.jpg" , "imgSrc_small" : "/image/w15.jpg" , "name" : "老粗布凉席三件套" , "price" : "1899","href" : "product_1927.html"},
+    {"imgSrc_big" : "/image/w16.jpg" , "imgSrc_small" : "/image/w16.jpg" , "name" : "纯棉缎纹磨毛纯色四件套" , "price" : "769","href" : "product_1927.html"},
+    {"imgSrc_big" : "/image/w17.jpg" , "imgSrc_small" : "/image/w17.jpg" , "name" : "天然新疆棉针织纯色件套" , "price" : "569","href" : "product_1927.html"},
+    {"imgSrc_big" : "/image/w18.jpg" , "imgSrc_small" : "/image/w18.jpg" , "name" : "天然新疆棉针织纯色件套" , "price" : "569","href" : "product_1927.html"},
+    {"imgSrc_big" : "/image/w20.jpg" , "imgSrc_small" : "/image/w20.jpg" , "name" : "双层纱色织夏凉被" , "price" : "569","href" : "product_1927.html"},
+    {"imgSrc_big" : "/image/w20.jpg" , "imgSrc_small" : "/image/w20.jpg" , "name" : "手工植物染亚麻四件套" , "price" : "569","href" : "product_1927.html"},
+    {"imgSrc_big" : "/image/w21.jpg" , "imgSrc_small" : "/image/w21.jpg" , "name" : "240根纯棉缎纹纯色四件套" , "price" : "299","href" : "product_1927.html"},
+    {"imgSrc_big" : "/image/w23.jpg" , "imgSrc_small" : "/image/w23.jpg" , "name" : "全工艺精梳纯棉600根纯色四件套" , "price" : "1899","href" : "product_1927.html"},
+    {"imgSrc_big" : "/image/w23.jpg" , "imgSrc_small" : "/image/w23.jpg" , "name" : "老粗布凉席三件套" , "price" : "699","href" : "product_1927.html"},
+    {"imgSrc_big" : "/image/w24.jpg" , "imgSrc_small" : "/image/w24.jpg" , "name" : "精梳纯棉缎纹绣花四件套-相惜" , "price" : "699","href" : "product_1927.html"},
+    {"imgSrc_big" : "/image/w25.jpg" , "imgSrc_small" : "/image/w25.jpg" , "name" : "老粗布凉席三件套" , "price" : "1899","href" : "product_1927.html"},
+    {"imgSrc_big" : "/image/w26.jpg" , "imgSrc_small" : "/image/w26.jpg" , "name" : "纯棉缎纹磨毛纯色四件套" , "price" : "769","href" : "product_1927.html"},
+    {"imgSrc_big" : "/image/w2.jpg" , "imgSrc_small" : "/image/w2.jpg" , "name" : "天然新疆棉针织纯色件套" , "price" : "569","href" : "product_1927.html"},
+    {"imgSrc_big" : "/image/w8.jpg" , "imgSrc_small" : "/image/w8.jpg" , "name" : "天然新疆棉针织纯色件套" , "price" : "569","href" : "product_1927.html"},
+    {"imgSrc_big" : "/image/w29.jpg" , "imgSrc_small" : "/image/w29.jpg" , "name" : "双层纱色织夏凉被" , "price" : "569","href" : "product_1927.html"},
+    {"imgSrc_big" : "/image/w30.jpg" , "imgSrc_small" : "/image/w30.jpg" , "name" : "手工植物染亚麻四件套" , "price" : "569","href" : "product_1927.html"}
+  ]
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
